@@ -14,7 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="376dp"
-        android:background="#FF5722"
         android:fontFamily="@font/logo_name"
         android:text="@string/eslogan"
         android:textColor="#FBF7F7"
