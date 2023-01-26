@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name" translatable="false">YourPlace</string>
+    <string name="mensaje_logo" translatable="false">YOUR PLACE</string>
+    <string name="eslogan">Tu app de confianza</string>
+    <string name="texto_btn">Iniciar Sesión</string>
+    <string name="img_inicio">Imagen inicio</string>
+    <string name="bienvenido">Bienvenido!</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="Bienvenida">Bienvenida</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+
+
+    //Ventana Iniciar Sesion
+    <string name="txt_log_in">Inicia Sesion</string>
+    <string name="plain_txt_correo">Correo</string>
+    <string name="plain_txt_contraseña">Contraseña</string>
+    <string name="btn_entrar">Iniciar Sesión</string>
+    <string name="txt_contraseña_olvidada">¿Olvidaste la contraseña?</string>
+    <string name="txt_crearCuenta">¿No tienes una cuenta?, Crea una cuenta.</string>
+
+    // Ventana Crear cuenta
+    <string name="txt_Ingresa_Tus_Datos">Ingresa tus datos</string>
+    <string name="creaNombre">Nombre</string>
+    <string name="crearApellido">Apellido</string>
+    <string name="plain_correo_CrearCuenta">Correo</string>
+    <string name="plain_txt_crearContraseña">Contraseña</string>
+    <string name="plain_txt_confirmarContrasela">Confirma contraseña</string>
+    <string name="btn_ConfirmarCrearCuenta">Crear cuenta</string>
+    <string name="img_iniciosesion">img-InicioSesion</string>
+    <string name="img_crearcuenta">img-crearCuenta</string>
+    <string name="mensaje_bienvenida_selecciona_usuario">"Bienvenido "</string>
+    <string name="selecciona_tu_usuario">Selecciona una opcion</string>
+    <string name="selecciona_usuario_Cliente">Cliente</string>
+    <string name="selecciona_usuario_negocio">Negocio</string>
+    <string name="img_selecciona_usuario_imgCliente">Imagen Cliente</string>
+    <string name="img_selec_usu_img_cliente">Imagen Cliente</string>
+    <string name="selec_usu_negocio">Imagen usuario</string>
+    <string name="txt_view_logo_name">Your Place</string>
+    <string name="btn_enviar">Buscar</string>
+    <string name="txt_busqueda">Barberia, Restaurantes, etc.</string>
+    <string name="btn_escanear_qr">Escanear QR</string>
+    <string name="btn_lugares_favoritos">Lugares favoritos</string>
+    <string name="btn_notificaciones">Notificaciones</string>
+    <string name="tv_lugares_top">Lugares cerca top!</string>
+    <string name="tv_promociones_top">Promociones top cerca de ti...</string>
+    <string name="btn_ver_promociones">Ver promociones</string>
+    <string name="tv_lugares_favoritos">Lugares Favoritos</string>
+    <string name="tv_barberia">Barberia \"Los amigos\"</string>
+    <string name="btn_agenndar_cita">Agendar cita</string>
+    <string name="btn_llamar">Llamar</string>
+    <string name="btn_ver_perfil">Ver perfil</string>
+    <string name="btn_regresar">Regresar</string>
+    <string name="tv_cita">Agendar cita</string>
+    <string name="tv_hora_de_cita">Hora de cita</string>
+    <string name="hora_cita">7:30</string>
+    <string name="tipo_pago">Metodo de pago</string>
+    <string name="txt_metodo_pago_input">Efectivo,Tarjeta</string>
+    <string name="tv_notas">Notas u observaciones</string>
+    <string name="txt_observaciones">Notas u observaciones</string>
+    <string name="btn_agender">Agendar</string>
+    <string name="btn_catalogo">Catalogo</string>
+    <string name="btn_publicar_anuncio">Publicar</string>
+    <string name="btn_generar_QR">Generar QR</string>
+    <string name="tv_barberia_los_amigos">Barberia \"Los amigos\"</string>
+    <string name="Abrir_cerrar_local">Abrir local</string>
+    <string name="tv_perfil">Perfil principal</string>
+    <string name="btn_ver_catalogo">Ver catalogo</string>
+    <string name="btn_promocion_actual">Ver Promocion</string>
+</resources>

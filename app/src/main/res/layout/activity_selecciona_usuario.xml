@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".seleccionaUsuario">
+
+    <TextView
+        android:id="@+id/txtViewBSeleccionaUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_selecciona_usuario_imgCliente"
+        android:fontFamily="@font/logo_name"
+        android:onClick="interfazNegocio"
+        android:text="@string/mensaje_bienvenida_selecciona_usuario"
+        android:textColor="#0E0E0E"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_selecciona_usuario_imgCliente"
+        android:fontFamily="@font/logo_name"
+        android:onClick="interfazNegocio"
+        android:text="@string/selecciona_tu_usuario"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewBSeleccionaUsuario" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_selecciona_usuario_imgCliente"
+        android:fontFamily="@font/logo_name"
+        android:onClick="interfazNegocio"
+        android:text="@string/selecciona_usuario_Cliente"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/img_cliente_selec_usu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_selecciona_usuario_imgCliente"
+        android:fontFamily="@font/logo_name"
+        android:onClick="interfazNegocio"
+        android:text="@string/selecciona_usuario_negocio"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/img_negocio_selec_usu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_cliente_selec_usu" />
+
+    <ImageView
+        android:id="@+id/img_negocio_selec_usu"
+        android:layout_width="255dp"
+        android:layout_height="174dp"
+        android:background="@drawable/fondo_letras"
+        android:contentDescription="@string/selec_usu_negocio"
+        android:onClick="interfazNegocio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:srcCompat="@mipmap/img_cliente_selecciona_negocio_foreground" />
+
+    <ImageView
+        android:id="@+id/img_cliente_selec_usu"
+        android:layout_width="255dp"
+        android:layout_height="174dp"
+        android:background="@drawable/fondo_letras"
+        android:contentDescription="@string/img_selec_usu_img_cliente"
+        android:onClick="interfazUsuario"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@mipmap/selecciona_usuario_img_usu_foreground" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
