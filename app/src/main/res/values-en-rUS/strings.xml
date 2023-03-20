@@ -43,10 +43,10 @@
     <string name="btn_lugares_favoritos">Favorite places</string>
     <string name="btn_notificaciones">Notifications</string>
     <string name="tv_lugares_top">Places  top!</string>
-    <string name="tv_promociones_top">Promociones top cerca de ti…</string>
-    <string name="btn_ver_promociones">Ver promociones</string>
-    <string name="tv_lugares_favoritos">Lugares Favoritos</string>
-    <string name="tv_barberia">Barberia \"Los amigos\"</string>
+    <string name="tv_promociones_top">Promotions near you</string>
+    <string name="btn_ver_promociones">See promotions</string>
+    <string name="tv_lugares_favoritos">Favorite places</string>
+    <string name="tv_barberia">Barber \"Los amigos\"</string>
     <string name="btn_agenndar_cita">Agendar cita</string>
     <string name="btn_llamar">Llamar</string>
     <string name="btn_ver_perfil">Ver perfil</string>
