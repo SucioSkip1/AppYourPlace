@@ -7,7 +7,7 @@
     <string name="img_inicio">Image Start</string>
     <string name="bienvenido">Sing In</string>
     <string name="nombres">First name</string>
-    <string name="apellidos">Apellidos</string>
+    <string name="apellidos">Last name</string>
     <string name="Bienvenida">Welcome</string>
     <string name="btn_crear_cuenta">Create account</string>
 
@@ -29,15 +29,21 @@
     <string name="plain_txt_confirmarContrasela">Confirm password</string>
     <string name="btn_ConfirmarCrearCuenta">Create account</string>
     <string name="img_crearcuenta">img-crearCuenta</string>
-    <string name="selecciona_tu_usuario">Selecciona una opcion</string>
-    <string name="selecciona_usuario_Cliente">Cliente</string>
+    <string name="mensaje_bienvenida_selecciona_usuario">Welcome</string>
+    <string name="selecciona_tu_usuario">Select a option</string>
+    <string name="selecciona_usuario_Cliente">Client</string>
+    <string name="selecciona_usuario_negocio">Business</string>
     <string name="img_selecciona_usuario_imgCliente">Imagen Cliente</string>
+    <string name="img_selec_usu_img_cliente">Image client</string>
+    <string name="selec_usu_negocio">Image user</string>
     <string name="txt_view_logo_name">Your Place</string>
-    <string name="txt_busqueda">Barberia, Restaurantes, etc.</string>
-    <string name="btn_escanear_qr">Escanear QR</string>
-    <string name="btn_notificaciones">Notificaciones</string>
-    <string name="tv_lugares_top">Lugares cerca top!</string>
-    <string name="tv_promociones_top">Promociones top cerca de ti...</string>
+    <string name="btn_enviar">Search</string>
+    <string name="txt_busqueda">Barber, Restaurants,etc.</string>
+    <string name="btn_escanear_qr">Scan a QR</string>
+    <string name="btn_lugares_favoritos">Favorite places</string>
+    <string name="btn_notificaciones">Notifications</string>
+    <string name="tv_lugares_top">Places  top!</string>
+    <string name="tv_promociones_top">Promociones top cerca de ti…</string>
     <string name="btn_ver_promociones">Ver promociones</string>
     <string name="tv_lugares_favoritos">Lugares Favoritos</string>
     <string name="tv_barberia">Barberia \"Los amigos\"</string>
@@ -55,9 +61,14 @@
     <string name="btn_agender">Agendar</string>
     <string name="btn_catalogo">Catalogo</string>
     <string name="btn_publicar_anuncio">Publicar</string>
+    <string name="btn_generar_QR">Generate QR</string>
     <string name="tv_barberia_los_amigos">Barberia \"Los amigos\"</string>
     <string name="Abrir_cerrar_local">Abrir local</string>
     <string name="tv_perfil">Perfil principal</string>
     <string name="btn_ver_catalogo">Ver catalogo</string>
+    <string name="logo_google">Logo Google</string>
+    <string name="img_twitter">Logo Twitter</string>
+    <string name="img_facebook">Logo Facebook</string>
+    <string name="btn_promocion_actual">See promotion</string>
 
 </resources>

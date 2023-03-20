@@ -43,7 +43,7 @@
     <string name="btn_lugares_favoritos">Lugares favoritos</string>
     <string name="btn_notificaciones">Notificaciones</string>
     <string name="tv_lugares_top">Lugares cerca top!</string>
-    <string name="tv_promociones_top">Promociones top cerca de ti...</string>
+    <string name="tv_promociones_top">Promociones top cerca de ti</string>
     <string name="btn_ver_promociones">Ver promociones</string>
     <string name="tv_lugares_favoritos">Lugares Favoritos</string>
     <string name="tv_barberia">Barberia \"Los amigos\"</string>
@@ -67,4 +67,7 @@
     <string name="tv_perfil">Perfil principal</string>
     <string name="btn_ver_catalogo">Ver catalogo</string>
     <string name="btn_promocion_actual">Ver Promocion</string>
+    <string name="logo_google">Logo Google</string>
+    <string name="img_twitter">Logo Twitter</string>
+    <string name="img_facebook">Logo Facebook</string>
 </resources>
