@@ -8,15 +8,25 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class agendar_cita extends AppCompatActivity {
             EditText Time, Pago, Notas;
+            String nombreCorte,precio;
+            int img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Objects.requireNonNull(getSupportActionBar()).hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendar_cita);
         Time = findViewById(R.id.text_time_hora_cita);
         Pago = findViewById(R.id.edit_txt_metodo_pago);
         Notas = findViewById(R.id.txt_observaciones);
+
+        Bundle rec = this.getIntent().getExtras();
+         nombreCorte = rec.getString("nombreCorte");
+         precio = rec.getString("precio");
+            img = Integer.parseInt(rec.getString("img"));
     }
 
 
@@ -27,9 +37,16 @@ public class agendar_cita extends AppCompatActivity {
             Toast.makeText(this, "No has llenado los datos", Toast.LENGTH_SHORT).show();
         }
         else{
-            Intent i = new Intent(getApplicationContext(),lugares_favoritos.class);
+            Bundle dato = new Bundle();
+            dato.putString("nombreCorte1",nombreCorte);
+            dato.putString("precioCorte1",precio);
+            dato.putString("img2", String.valueOf(img));
+            dato.putString("Time", Time.getText().toString());
+            dato.putString("pago", Pago.getText().toString());
+            dato.putString("Notas",Notas.getText().toString());
+            Intent i = new Intent(getApplicationContext(),confirmarDatosDeCita.class);
+            i.putExtras(dato);
             startActivity(i);
-            Toast.makeText(this, "Cita agregada con exito", Toast.LENGTH_SHORT).show();
         }
     }
 }

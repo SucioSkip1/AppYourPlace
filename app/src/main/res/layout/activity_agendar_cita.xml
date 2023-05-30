@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/background_screens"
     tools:context=".agendar_cita">
 
     <EditText
         android:id="@+id/edit_txt_metodo_pago"
         android:layout_width="182dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginTop="28dp"
         android:drawableEnd="@drawable/pago"
         android:drawableTint="#000000"
@@ -19,50 +19,58 @@
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_metodo_pago" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_metodo_pago"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_hora"
-        android:layout_width="151dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="52dp"
-        android:fontFamily="@font/logo_name"
+        android:layout_width="247dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
         android:text="@string/tv_hora_de_cita"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.062" />
 
     <TextView
         android:id="@+id/tv_metodo_pago"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="257dp"
+        android:layout_height="43dp"
         android:layout_marginTop="36dp"
-        android:fontFamily="@font/logo_name"
+        android:gravity="center"
         android:text="@string/tipo_pago"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_time_hora_cita" />
+        app:layout_constraintTop_toBottomOf="@+id/text_time_hora_cita"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:fontFamily="@font/logo_name"
+        android:layout_marginTop="16dp"
         android:text="@string/tv_cita"
         android:textColor="#000000"
-        android:textSize="34sp"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/text_time_hora_cita"
@@ -72,60 +80,64 @@
         android:drawableEnd="@drawable/reloj"
         android:drawableTint="#000000"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/hora_cita"
         android:inputType="time"
-        android:textColor="#020202"
-        android:textColorHint="#050505"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hora" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_hora"
+        app:layout_constraintVertical_bias="0.004" />
 
     <TextView
         android:id="@+id/tv_notas_u_obser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/logo_name"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="@string/tv_notas"
         android:textColor="#000000"
-        android:textColorHint="#050505"
-        android:textSize="20sp"
+        android:textColorHint="#4C3D3D"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_txt_metodo_pago" />
+
+    <Button
+        android:id="@+id/btn_agendar"
+        style="@style/diseño_botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/reloj"
+        android:drawableTint="#000000"
+        android:onClick="btnAgendar"
+        android:text="@string/btn_agender"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_observaciones"
+        app:layout_constraintVertical_bias="0.382" />
 
     <EditText
         android:id="@+id/txt_observaciones"
         android:layout_width="253dp"
         android:layout_height="98dp"
         android:ems="10"
-        android:gravity="start|top"
+        android:gravity="center|start|right"
         android:hint="@string/txt_observaciones"
         android:inputType="textMultiLine"
         android:textAlignment="textEnd"
         android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_notas_u_obser"
-        app:layout_constraintVertical_bias="0.154" />
+        app:layout_constraintVertical_bias="0.149"
+        tools:ignore="RtlCompat" />
 
-    <Button
-        android:id="@+id/btn_agendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/design_buttons"
-        android:drawableEnd="@drawable/reloj"
-        android:drawableTint="#000000"
-        android:fontFamily="@font/logo_name"
-        android:onClick="btnAgendar"
-        android:text="@string/btn_agender"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_observaciones" />
 </androidx.constraintlayout.widget.ConstraintLayout>

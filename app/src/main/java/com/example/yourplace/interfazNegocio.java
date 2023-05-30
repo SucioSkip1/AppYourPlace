@@ -22,7 +22,7 @@ public class interfazNegocio extends AppCompatActivity {
 
 
     public void irCatalogo(View view){
-        Intent i = new Intent(getApplicationContext(),catalogo.class);
+        Intent i = new Intent(getApplicationContext(), catalogo.class);
         startActivity(i);
     }
 
