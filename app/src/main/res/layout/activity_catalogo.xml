@@ -8,18 +8,18 @@
     tools:context=".catalogo">
 
     <ImageView
-        android:id="@+id/logoBanda"
+        android:id="@+id/imgLocal"
         android:layout_width="131dp"
         android:layout_height="141dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtTitulo"
+        app:layout_constraintEnd_toStartOf="@+id/nombreLocal"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtDes"
+        android:id="@+id/txtDireccion"
         android:layout_width="196dp"
         android:layout_height="91dp"
         android:layout_marginTop="8dp"
@@ -27,17 +27,17 @@
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="34dp"
-        app:layout_constraintBottom_toBottomOf="@+id/logoBanda"
+        app:layout_constraintBottom_toBottomOf="@+id/imgLocal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txtTitulo"
-        app:layout_constraintStart_toStartOf="@+id/txtTitulo"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:layout_constraintStart_toEndOf="@+id/nombreLocal"
+        app:layout_constraintStart_toStartOf="@+id/nombreLocal"
+        app:layout_constraintTop_toBottomOf="@+id/nombreLocal"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextSizeCheck" />
 
     <TextView
-        android:id="@+id/txtTitulo"
+        android:id="@+id/nombreLocal"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -48,11 +48,11 @@
         android:textColor="#323131"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtDes"
+        app:layout_constraintBottom_toTopOf="@+id/txtDireccion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtDes"
+        app:layout_constraintEnd_toStartOf="@+id/txtDireccion"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/logoBanda"
+        app:layout_constraintStart_toEndOf="@+id/imgLocal"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

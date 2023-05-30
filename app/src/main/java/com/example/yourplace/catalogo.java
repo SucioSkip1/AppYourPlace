@@ -1,7 +1,5 @@
 package com.example.yourplace;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.MatrixCursor;
@@ -9,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-import android.widget.Toast;
 
 public class catalogo extends ListActivity {
     MatrixCursor datos;
@@ -22,7 +19,7 @@ public class catalogo extends ListActivity {
         datos =new MatrixCursor(colDatos);
         datos.addRow(new Object[]{"0",R.drawable.cero,"Tapefade","$120"});
         String [] Columnas = {"img","nombreCorte","precio"};
-        int [] vistas = {R.id.logoBanda,R.id.txtTitulo,R.id.txtDes};
+        int [] vistas = {R.id.imgLocal,R.id.nombreLocal,R.id.txtDireccion};
         SimpleCursorAdapter adapter =new SimpleCursorAdapter(this, R.layout.activity_catalogo,datos,Columnas,vistas,1);
         setListAdapter(adapter);
     }
