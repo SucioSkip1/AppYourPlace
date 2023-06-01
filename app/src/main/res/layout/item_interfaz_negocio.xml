@@ -4,57 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/des_btn"
-    tools:context=".catalogo">
+    android:backgroundTint="#2AE8C3"
+    tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imgLocal"
-        android:layout_width="131dp"
-        android:layout_height="141dp"
+        android:id="@+id/img_negocio_interfaz_negocio"
+        android:layout_width="120dp"
+        android:layout_height="134dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nombreLocal"
+        app:layout_constraintEnd_toStartOf="@+id/txt_nombreNegocio_Interfaz_negocio"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/txtDireccion"
+        android:id="@+id/txt_descripcion_negocio_interfaz_negocio"
         android:layout_width="196dp"
         android:layout_height="91dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/dis_back_txt"
+        android:background="@drawable/background_screens"
         android:gravity="center"
         android:textColor="#000000"
-        android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgLocal"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_negocio_interfaz_negocio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/nombreLocal"
-        app:layout_constraintStart_toStartOf="@+id/nombreLocal"
-        app:layout_constraintTop_toBottomOf="@+id/nombreLocal"
+        app:layout_constraintStart_toEndOf="@+id/txt_nombreNegocio_Interfaz_negocio"
+        app:layout_constraintStart_toStartOf="@+id/txt_nombreNegocio_Interfaz_negocio"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombreNegocio_Interfaz_negocio"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextSizeCheck" />
 
     <TextView
-        android:id="@+id/nombreLocal"
-        style="@style/diseño_botones"
+        android:id="@+id/txt_nombreNegocio_Interfaz_negocio"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/dis_txt"
+        android:background="@drawable/dise_botones_cover"
         android:gravity="center"
         android:textColor="#323131"
-        android:textSize="12dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtDireccion"
+        app:layout_constraintBottom_toTopOf="@+id/txt_descripcion_negocio_interfaz_negocio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtDireccion"
+        app:layout_constraintEnd_toStartOf="@+id/txt_descripcion_negocio_interfaz_negocio"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imgLocal"
+        app:layout_constraintStart_toEndOf="@+id/img_negocio_interfaz_negocio"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

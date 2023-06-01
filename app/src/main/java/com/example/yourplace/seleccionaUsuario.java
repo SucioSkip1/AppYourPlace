@@ -13,13 +13,15 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class seleccionaUsuario extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selecciona_usuario);
-
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
 
 

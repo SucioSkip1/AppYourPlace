@@ -13,12 +13,15 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class perfil_barberia extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_barberia);
+        Objects.requireNonNull(getSupportActionBar()).hide();
     }
     public void tomarFoto(View view){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED){

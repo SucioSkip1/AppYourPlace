@@ -17,17 +17,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.056" />
 
     <Button
         android:id="@+id/btn_catalogo"
         style="@style/diseño_botones"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/design_buttons"
+        android:layout_width="160dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="48dp"
         android:onClick="irCatalogo"
         android:text="@string/btn_catalogo"
         android:textColor="#000000"
@@ -38,17 +38,17 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.005" />
 
     <Button
         android:id="@+id/btn_generar_QR"
         style="@style/diseño_botones"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/design_buttons"
+        android:layout_width="160dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="48dp"
         android:onClick="irGenerarQR"
         android:text="@string/btn_generar_QR"
         android:textColor="#000000"
@@ -59,38 +59,17 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
-
-    <Button
-        android:id="@+id/btn_publicar_anuncio"
-        style="@style/diseño_botones"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/design_buttons"
-        android:text="@string/btn_publicar_anuncio"
-        android:textColor="#000000"
-        android:textSize="13dp"
-        app:backgroundTint="@null"
-        app:icon="@drawable/publi"
-        app:iconSize="30dp"
-        app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toEndOf="@+id/btn_catalogo"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.005" />
 
     <Button
         android:id="@+id/btn_Abrir_Cerrar_Local"
         style="@style/diseño_botones"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/design_buttons"
+        android:layout_width="160dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="40dp"
         android:onClick="abrirLocal"
         android:text="@string/Abrir_cerrar_local"
         android:textColor="#000000"
@@ -101,24 +80,59 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toEndOf="@+id/btn_publicar_anuncio"
+        app:layout_constraintTop_toBottomOf="@+id/btn_generar_QR"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_publicar_anuncio"
+        style="@style/diseño_botones"
+        android:layout_width="160dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="40dp"
+        android:onClick="irPublicar"
+        android:text="@string/btn_publicar_anuncio"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        app:backgroundTint="@null"
+        app:icon="@drawable/publi"
+        app:iconSize="30dp"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_catalogo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:text="Tus negocios"
         android:textColor="#000000"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Abrir_Cerrar_Local"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaNegocios"
+        android:layout_width="0dp"
+        android:layout_height="298dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#C07F00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.434" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

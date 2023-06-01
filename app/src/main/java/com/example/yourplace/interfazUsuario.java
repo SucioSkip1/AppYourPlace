@@ -15,16 +15,19 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class interfazUsuario extends AppCompatActivity {
 EditText Buscador;
 
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interfaz_usuario);
         Buscador = findViewById(R.id.editText_Buscador);
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
     }
 public void buscador(View view){
@@ -32,8 +35,8 @@ public void buscador(View view){
             Toast.makeText(this, "Las casillas estan vacias", Toast.LENGTH_SHORT).show();
     }else{
 
-            Buscador.setText("");
-            Toast.makeText(this, "No hay negocios disponibles", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(getApplicationContext(),lugares_favoritos.class);
+            startActivity(i);
     }
 }
     public void notificacion(View view){
@@ -54,24 +57,7 @@ public void buscador(View view){
         }
     }
 
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case 4000:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivity(intent);
-                }
-                else {
-                    ActivityCompat.requestPermissions(interfazUsuario.this,new String[] { Manifest.permission.CAMERA},
-                            4000);
 
-                }
-                return;
-        }
-
-
-    }
 
 
 

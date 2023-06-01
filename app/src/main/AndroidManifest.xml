@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission
-        android:name="android.permission.CALL_PHONE"
+        android:name="android.permission.CAMERA"
         tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
     <uses-permission
-        android:name="android.permission.CAMERA"
+        android:name="android.permission.CALL_PHONE"
         tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
 
     <application
@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YourPlace"
         tools:targetApi="31">
+        <activity
+            android:name=".cascaron_negocio_interfazNegocio"
+            android:exported="false" />
         <activity
             android:name=".ver_opiniones"
             android:exported="false" />

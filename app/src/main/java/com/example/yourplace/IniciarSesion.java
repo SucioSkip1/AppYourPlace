@@ -9,16 +9,19 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class IniciarSesion extends AppCompatActivity {
 
     //Declaran variables
     EditText Correo ,Contraseña;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
+        Objects.requireNonNull(getSupportActionBar()).hide();
       //Vincular vista con su instancia
      Correo =findViewById(R.id.plain_txt_InCorreo);
      Contraseña = findViewById(R.id.txt_password);

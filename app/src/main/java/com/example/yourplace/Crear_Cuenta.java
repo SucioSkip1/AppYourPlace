@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class Crear_Cuenta extends AppCompatActivity {
     EditText Nombre, Apellido, Correo, Contraseña, ConfirmarContraseña;
 
@@ -15,7 +17,7 @@ public class Crear_Cuenta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_cuenta);
-
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         Nombre = findViewById(R.id.txt_Nombre);
         Apellido = findViewById(R.id.txt_apellido);

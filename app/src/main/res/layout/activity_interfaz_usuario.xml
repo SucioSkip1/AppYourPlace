@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondousuario"
+    android:background="@drawable/background_screens"
     tools:context=".interfazUsuario">
 
     <Button
         android:id="@+id/btn_enviar"
-        android:layout_width="102dp"
+        style="@style/diseño_botones"
+        android:layout_width="90dp"
         android:layout_height="38dp"
-        android:background="@drawable/design_buttons"
-        android:fontFamily="@font/logo_name"
         android:onClick="buscador"
         android:text="@string/btn_enviar"
         android:textColor="#151414"
+        android:textSize="12dp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editText_Buscador"
-        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <EditText
         android:id="@+id/editText_Buscador"
-        android:layout_width="254dp"
-        android:layout_height="40dp"
+        android:layout_width="212dp"
+        android:layout_height="53dp"
         android:drawableEnd="@drawable/lupa"
         android:ems="10"
         android:hint="@string/txt_busqueda"
@@ -36,17 +36,16 @@
         android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="355dp"
+        style="@style/diseño_botones"
+        android:layout_width="300dp"
         android:layout_height="65dp"
-        android:background="@drawable/design_buttons"
-        android:fontFamily="@font/logo_name"
         android:onClick="tomarFoto"
         android:text="@string/btn_escanear_qr"
         android:textColor="#000000"
@@ -64,11 +63,10 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="355dp"
+        style="@style/diseño_botones"
+        android:layout_width="300dp"
         android:layout_height="65dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/design_buttons"
-        android:fontFamily="@font/logo_name"
         android:onClick="irLugaresFavoritos"
         android:text="@string/btn_lugares_favoritos"
         android:textColor="#000000"
@@ -85,11 +83,10 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="355dp"
+        style="@style/diseño_botones"
+        android:layout_width="300dp"
         android:layout_height="65dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/design_buttons"
-        android:fontFamily="@font/logo_name"
         android:onClick="notificacion"
         android:text="@string/btn_notificaciones"
         android:textColor="#000000"
@@ -110,7 +107,6 @@
         android:layout_width="325dp"
         android:layout_height="123dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/fondo_letras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
@@ -124,7 +120,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/logo_name"
         android:text="@string/tv_lugares_top"
         android:textColor="#050505"
         android:textSize="24sp"
@@ -139,7 +134,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:fontFamily="@font/logo_name"
         android:text="@string/tv_promociones_top"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -152,10 +146,9 @@
 
     <Button
         android:id="@+id/button6"
+        style="@style/diseño_botones"
         android:layout_width="323dp"
         android:layout_height="83dp"
-        android:background="@drawable/design_buttons"
-        android:fontFamily="@font/logo_name"
 
         android:text="@string/btn_ver_promociones"
         android:textColor="#000000"

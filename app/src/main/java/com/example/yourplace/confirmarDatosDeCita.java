@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class confirmarDatosDeCita extends AppCompatActivity {
         TextView txtnombreCorte,txtPrecioCorte,txtHora,txtPago,txtNotas;
         ImageView cover;
@@ -17,6 +19,7 @@ public class confirmarDatosDeCita extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Objects.requireNonNull(getSupportActionBar()).hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos_de_cita);
         txtPrecioCorte= findViewById(R.id.PrecioCorte);
