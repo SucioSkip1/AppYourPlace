@@ -34,12 +34,48 @@ public class perfil_barberia extends AppCompatActivity {
         Recyclerview.setLayoutManager(new LinearLayoutManager(this));
             adapter1 = new listaOpiniones(nombreCliente,opinion,calificacion,listaImgClientes);
             Recyclerview.setAdapter(adapter1);
-            nombreCliente.add("Eduardo Marcial");
+            nombreCliente.add("Eduardo Marcial♫");
+        nombreCliente.add("Edgar Salinas ☻");
+        nombreCliente.add("Jessica Camargo◘");
+        nombreCliente.add("Carlos Zavala♠");
+        nombreCliente.add("Loredo Miguel•");
+        nombreCliente.add("Joxan Garcia♣");
+        nombreCliente.add("El amigo anonimo");
+        nombreCliente.add("Anton Ego");
+        nombreCliente.add("Enrique Gomez");
+        nombreCliente.add("Regina Molina♥");
             //----------------------
         opinion.add("Muy buen servicio, 10 de 10.");
+        opinion.add("Buen servicio, se puede mejorar mas...");
+        opinion.add("No me gusto el corte, me dejo muy pelon :(");
+        opinion.add("Que guapo el barbero");
+        opinion.add("Esperaba mas del lugar, solo lo bueno que era barato...");
+        opinion.add("kien atiende?, no me hatendieron vien");
+        opinion.add("Excelente servicio!, el barbero muy educado!, mas gente asi");
+        opinion.add("Estuve esperando media hora, no me dejaron pasar.");
+        opinion.add("Me cobraron caro, espero no volver a ir");
+        opinion.add("Ese local es muy bueno, pero el barbero muy lento");
         //----------------------
-        calificacion.add("*****");
+        calificacion.add("★★★★☆");
+        calificacion.add("★★☆☆☆");
+        calificacion.add("★★★★★");
+        calificacion.add("★☆☆☆☆");
+        calificacion.add("★★★★☆");
+        calificacion.add("★★☆☆☆");
+        calificacion.add("☆☆☆☆☆");
+        calificacion.add("☆☆☆☆☆");
+        calificacion.add("★★★☆☆");
+        calificacion.add("☆☆☆☆☆");
         //----------------------
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
+        listaImgClientes.add(R.drawable.cero);
         listaImgClientes.add(R.drawable.cero);
         adapter1.notifyDataSetChanged();
         adapter1.setOnItemClickListener(new listaOpiniones.OnItemClickListener() {

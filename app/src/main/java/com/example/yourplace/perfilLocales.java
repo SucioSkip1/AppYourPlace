@@ -31,15 +31,23 @@ public class perfilLocales extends AppCompatActivity {
         txtLocal = findViewById(R.id.txt_nombre_local_perfil_locales);
         txtDir = findViewById(R.id.txt_dir_perfil_locales);
         imgLocal_perfil = findViewById(R.id.img_Local_Perfil_Locales);
+
+
+
+
+
+
         Bundle recLugaresFav= this.getIntent().getExtras();
         int imgLocal = Integer.parseInt(recLugaresFav.getString("imgLugaresFav"));
         String nomLocal1 = recLugaresFav.getString("nombreLocalLugaresFav");
         String dir = recLugaresFav.getString("dir_lugaresFav");
-
         txtLocal.setText(nomLocal1);
         imgLocal_perfil.setImageResource(imgLocal);
         txtDir.setText(dir);
-        //Datos opiniones
+         gps = recLugaresFav.getString("gps_lugares_fav");
+         web = recLugaresFav.getString("redes_lugares_fav");
+         correo = recLugaresFav.getString("email_lugares_fav");
+
 
     }
     public void verOpiniones(View view)
@@ -48,9 +56,7 @@ public class perfilLocales extends AppCompatActivity {
         startActivity(i);
     }
     public void streetview(View view) {
-
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(gps));
-        //cbll=latitud,longitud&cbp=0,azimut,0,zoom,altura
         startActivity(intent);
     }
     public void llamarTelefono(View view){
@@ -82,9 +88,7 @@ public class perfilLocales extends AppCompatActivity {
         startActivity(intent);
     }
     public void abrirPagina(View view) {
-
-        Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse(web));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(web));
         startActivity(intent);
     }
 

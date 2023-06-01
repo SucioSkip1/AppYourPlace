@@ -25,8 +25,8 @@ MatrixCursor datos;
         datos =new MatrixCursor(colDatos);
         datos.addRow(new Object[]{
                 "0",
-                R.drawable.img_chaveta,
-                "Refacciones automotrices LA CHAVETA",
+                R.drawable.refa,
+                "Refaccionaria \"Chaveta\"",
                 "Av. P. del Sur 350, Morelos 3ra Secc, 54935 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
                 "www.google.com",
@@ -43,23 +43,76 @@ MatrixCursor datos;
                 "5576166860"});
         datos.addRow(new Object[]{
                 "2",
-                R.drawable.img_tortilleria,
+                R.drawable.pana,
                 "Panaderia \"Pan delicioso\"",
                 "Av. P. del Sur 350, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
                 "www.google.com",
-                "correo@hotmal.com",
+                "panaderia@hotmal.com",
                 "5576166860"});
         datos.addRow(new Object[]{
                 "3",
-                R.drawable.img_tortilleria,
+                R.drawable.barbe,
                 "Barberia \"Los amigos\"",
                 "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
                 "www.google.com",
-                "correo@hotmal.com",
+                "barberia@hotmail.com",
                 "5576166860"});
-
+        datos.addRow(new Object[]{
+                "4",
+                R.drawable.vulca,
+                "Vulcanizadora \"El pepe\"",
+                "Av. Carlos del canal 376, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
+                "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
+                "www.google.com",
+                "barberia@hotmail.com",
+                "5576166860"});
+        datos.addRow(new Object[]{
+                "5",
+                R.drawable.pape,
+                "Papeleria \"La peke\"",
+                "Av. Carlos del canal 678, Morelos 3ra Secc, 54933 San Pablo de las Salinas, Méx.",
+                "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
+                "www.google.com",
+                "barberia@hotmail.com",
+                "5576166860"});
+        datos.addRow(new Object[]{
+                "6",
+                R.drawable.zapa,
+                "Zapateria \"El zapato feliz\"",
+                "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
+                "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
+                "www.google.com",
+                "barberia@hotmail.com",
+                "5576166860"});
+        datos.addRow(new Object[]{
+                "7",
+                R.drawable.caarni,
+                "Carniceria \"Toro loco\"",
+                "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
+                "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
+                "www.google.com",
+                "barberia@hotmail.com",
+                "5576166860"});
+        datos.addRow(new Object[]{
+                "8",
+                R.drawable.pape,
+                "Papeleria\"El libro feliz\"",
+                "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
+                "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
+                "www.google.com",
+                "barberia@hotmail.com",
+                "5576166860"});
+        datos.addRow(new Object[]{
+                "9",
+                R.drawable.ciber,
+                "Ciber cafe \"Marianas Web\"",
+                "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
+                "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
+                "www.google.com",
+                "barberia@hotmail.com",
+                "5576166860"});
 
         String [] Columnas = {"img","nombreLocal","Direccion","gps","web","correo"};
         int [] vistas = {R.id.imgLocal,R.id.nombreLocal,R.id.txtDireccion};
@@ -72,7 +125,10 @@ MatrixCursor datos;
         Bundle envioDatoslugaresFav = new Bundle();
         envioDatoslugaresFav.putString("imgLugaresFav", String.valueOf(datos.getInt(1)));
         envioDatoslugaresFav.putString("nombreLocalLugaresFav",datos.getString(2));
-        envioDatoslugaresFav.putString("dir_lugaresFav", datos.getString(3));
+        envioDatoslugaresFav.putString("dir_lugaresFav",datos.getString(3));
+        envioDatoslugaresFav.putString("gps_lugares_fav",datos.getString(4));
+        envioDatoslugaresFav.putString("redes_lugares_fav",datos.getString(5));
+        envioDatoslugaresFav.putString("email_lugares_fav",datos.getString(6));
         Intent i = new Intent(getApplicationContext(), perfilLocales.class);
         i.putExtras(envioDatoslugaresFav);
         startActivity(i);
