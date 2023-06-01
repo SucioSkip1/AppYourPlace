@@ -3,25 +3,51 @@ package com.example.yourplace;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class perfil_barberia extends AppCompatActivity {
+    RecyclerView Recyclerview;
+    listaOpiniones adapter1;
+    private List<String> nombreCliente = new ArrayList<>();
+    private List <String> opinion = new ArrayList<>();
+    private List <String> calificacion = new ArrayList<>();
+    private List<Integer> listaImgClientes = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_barberia);
         Objects.requireNonNull(getSupportActionBar()).hide();
+        Recyclerview = findViewById(R.id.rv_perfil_barberia);
+        Recyclerview.setLayoutManager(new LinearLayoutManager(this));
+            adapter1 = new listaOpiniones(nombreCliente,opinion,calificacion,listaImgClientes);
+            Recyclerview.setAdapter(adapter1);
+            nombreCliente.add("Eduardo Marcial");
+            //----------------------
+        opinion.add("Muy buen servicio, 10 de 10.");
+        //----------------------
+        calificacion.add("*****");
+        //----------------------
+        listaImgClientes.add(R.drawable.cero);
+        adapter1.notifyDataSetChanged();
+        adapter1.setOnItemClickListener(new listaOpiniones.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+
+            }
+        });
     }
     public void tomarFoto(View view){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED){

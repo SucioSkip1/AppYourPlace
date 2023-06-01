@@ -46,20 +46,28 @@ public void buscador(View view){
         Intent i = new Intent(getApplicationContext(),lugares_favoritos.class);
         startActivity(i);
       }
-    public void tomarFoto(View view){
-        if (ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA)==PackageManager.PERMISSION_GRANTED){
+    public void tomarFoto(View view) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivity(intent);
-        }else{
-            ActivityCompat.requestPermissions(interfazUsuario.this,new String[] { Manifest.permission.CAMERA},
-                    4000);
-
+            startActivityForResult(intent, 1); // Iniciar la actividad de la cámara y esperar el resultado
+        } else {
+            ActivityCompat.requestPermissions(interfazUsuario.this, new String[]{Manifest.permission.CAMERA}, 4000);
         }
+
     }
 
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            // La foto se tomó exitosamente
+            Intent i = new Intent(getApplicationContext(),perfil_barberia.class);
+            startActivity(i);
+        }
+    }
 
 
 }

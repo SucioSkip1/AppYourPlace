@@ -55,7 +55,7 @@ RecyclerView RV;
             @Override
             public void onItemClick(int position) {
                 Bundle envioDatos = new Bundle();
-                Intent i = new Intent(getApplicationContext(),catalogo.class);
+                Intent i = new Intent(getApplicationContext(),cascaron_negocio_interfazNegocio.class);
                 i.putExtras(envioDatos);
                 startActivity(i);
                 //i.putExtra("titulo",dataList.get(position));
