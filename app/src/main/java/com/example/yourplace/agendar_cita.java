@@ -32,7 +32,11 @@ public class agendar_cita extends AppCompatActivity {
             img = Integer.parseInt(rec.getString("img"));
     }
 
-
+    public void llenaDatos(View view){
+        Time.setText("12:30am");
+        Pago.setText("Efectivo");
+        Notas.setText("Hola!,tengo prisa, por favor, atiendame rapido!");
+    }
 
     public void btnAgendar(View view){
         if (Time.getText().toString().isEmpty()&&Pago.getText().toString().isEmpty()&&

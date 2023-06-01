@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -48,13 +49,16 @@ public class confirmarDatosDeCita extends AppCompatActivity {
 cover.setImageResource(img);
 
     }
+
     public void confirmarDatos(View view){
         Intent i = new Intent(getApplicationContext(),perfil_barberia.class);
         startActivity(i);
+        Toast.makeText(this, "Se ha agregado tu cita con exito!", Toast.LENGTH_SHORT).show();
     }
 
     public void editarDatos(View view){
         Intent i = new Intent(getApplicationContext(),catalogo.class);
         startActivity(i);
+        Toast.makeText(this, "Cambia tus datos!", Toast.LENGTH_SHORT).show();
     }
 }

@@ -20,6 +20,9 @@
         android:theme="@style/Theme.YourPlace"
         tools:targetApi="31">
         <activity
+            android:name=".contribuye_opinion"
+            android:exported="false" />
+        <activity
             android:name=".cascaron_negocio_interfazNegocio"
             android:exported="false" />
         <activity
