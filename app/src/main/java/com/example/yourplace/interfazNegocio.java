@@ -36,29 +36,33 @@ RecyclerView RV;
         //Creacion de la instancia de la lista
         adapter = new MyAdapter(nombreNegocio,desNegocio,img_negocio);
         RV.setAdapter(adapter);
-        nombreNegocio.add("Ferreteria");
-        nombreNegocio.add("Barberia");
+        nombreNegocio.add("Taller mecanico");
+        nombreNegocio.add("Refaccioanria");
         nombreNegocio.add("Paleteria");
-        nombreNegocio.add("Restaurante");
+        nombreNegocio.add("Vulcanizadora");
         //--------------------------------
-        desNegocio.add("Tienda ");
-        desNegocio.add("Tienda fisica");
-        desNegocio.add("Tienda fisica");
-        desNegocio.add("Tienda fisica");
+        desNegocio.add("Manzana 087, Casitas San Pablo, 54925 San Pablo de las Salinas, Méx.");
+        desNegocio.add("Perla 550, Casitas San Pablo, 54939 San Pablo de las Salinas, Méx.");
+        desNegocio.add("Flores Villa, Casitas San Pablo, 54975 San Pablo de las Salinas, Méx.");
+        desNegocio.add("Pera 231, Casitas San Pablo, 54936 San Pablo de las Salinas, Méx.");
         //-------------------------------
+        img_negocio.add(R.drawable.dda);
+        img_negocio.add(R.drawable.refa);
         img_negocio.add(R.drawable.carne);
-        img_negocio.add(R.drawable.carne);
-        img_negocio.add(R.drawable.carne);
-        img_negocio.add(R.drawable.carne);
+        img_negocio.add(R.drawable.vulca);
         adapter.notifyDataSetChanged();
         adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Bundle envioDatos = new Bundle();
+                Bundle envInterfazNegocio = new Bundle();
                 Intent i = new Intent(getApplicationContext(),cascaron_negocio_interfazNegocio.class);
-                i.putExtras(envioDatos);
+            envInterfazNegocio.putString("nomLocalInterfazNegocios", nombreNegocio.get(position));
+            envInterfazNegocio.putString("desNegocioInterfazNegocio", desNegocio.get(position));
+            envInterfazNegocio.putString("imgNegocioInterfazNegocio", String.valueOf(img_negocio.get(position)));
+                i.putExtras(envInterfazNegocio);
                 startActivity(i);
                 //i.putExtra("titulo",dataList.get(position));
+
             }
         });
     }

@@ -3,6 +3,8 @@ package com.example.yourplace;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -15,12 +17,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class interfazUsuario extends AppCompatActivity {
 EditText Buscador;
-
-
+RecyclerView listaLugaresTop;
+private List <String> nombreLocal = new ArrayList<>();
+    private List <String> desLocal = new ArrayList<>();
+    private List <Integer> imgLocal = new ArrayList<>();
+    listaLugaresTop adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +35,20 @@ EditText Buscador;
         setContentView(R.layout.activity_interfaz_usuario);
         Buscador = findViewById(R.id.editText_Buscador);
         Objects.requireNonNull(getSupportActionBar()).hide();
+        listaLugaresTop=findViewById(R.id.rv_lista_lugares_top);
+        listaLugaresTop.setLayoutManager(new LinearLayoutManager(this));
+    //Creacionb instancia
+        adaptador = new listaLugaresTop(nombreLocal, desLocal, imgLocal);
+        listaLugaresTop.setAdapter(adaptador);
+        nombreLocal.add("Papeleria");
+        nombreLocal.add("Vulcanizadora");
 
+        desLocal.add("Obtuvo 5 estrellas!");
+        desLocal.add("Regalo un servicio!");
+
+        imgLocal.add(R.drawable.vulca);
+        imgLocal.add(R.drawable.vulca);
+        adaptador.notifyDataSetChanged();
     }
 public void buscador(View view){
         if (Buscador.getText().toString().isEmpty()){
@@ -68,6 +88,9 @@ public void buscador(View view){
             startActivity(i);
         }
     }
-
+    public void irPromociones (View view){
+        Intent i = new Intent(getApplicationContext(), ver_promociones.class);
+        startActivity(i);
+    }
 
 }

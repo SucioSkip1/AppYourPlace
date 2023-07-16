@@ -46,7 +46,7 @@
         android:background="@drawable/dis_txt"
         android:gravity="center"
         android:textColor="#323131"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtDireccion"
         app:layout_constraintEnd_toEndOf="parent"

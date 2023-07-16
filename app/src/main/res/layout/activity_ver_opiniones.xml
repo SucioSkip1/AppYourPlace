@@ -8,7 +8,7 @@
     tools:context=".ver_opiniones">
 
     <ImageView
-        android:id="@+id/img_cliente_ver_opiniones"
+        android:id="@+id/img_ver_promociones"
         android:layout_width="97dp"
         android:layout_height="125dp"
         android:layout_marginStart="8dp"
@@ -16,29 +16,29 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_nombre_ver_opiniones"
+        app:layout_constraintEnd_toStartOf="@+id/txt_titulo_ver_promociones"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtcalificacion_ver_opiniones"
+        android:id="@+id/txt_tiempo_promocion"
         android:layout_width="214dp"
         android:layout_height="25dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_cliente_ver_opiniones"
-        app:layout_constraintEnd_toEndOf="@+id/txt_hora_ver_opiniones"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ver_promociones"
+        app:layout_constraintEnd_toEndOf="@+id/txt_precio_ver_promociones"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_hora_ver_opiniones"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hora_ver_opiniones"
+        app:layout_constraintStart_toStartOf="@+id/txt_precio_ver_promociones"
+        app:layout_constraintTop_toBottomOf="@+id/txt_precio_ver_promociones"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txt_nombre_ver_opiniones"
+        android:id="@+id/txt_titulo_ver_promociones"
         android:layout_width="214dp"
         android:layout_height="25dp"
         android:layout_marginTop="8dp"
@@ -52,19 +52,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_hora_ver_opiniones"
+        android:id="@+id/txt_precio_ver_promociones"
         android:layout_width="214dp"
         android:layout_height="25dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txt_opinion_ver_opiniones"
+        app:layout_constraintEnd_toEndOf="@+id/txt_des_ver_promociones"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_opinion_ver_opiniones"
-        app:layout_constraintTop_toBottomOf="@+id/txt_opinion_ver_opiniones" />
+        app:layout_constraintStart_toStartOf="@+id/txt_des_ver_promociones"
+        app:layout_constraintTop_toBottomOf="@+id/txt_des_ver_promociones" />
 
     <TextView
-        android:id="@+id/txt_opinion_ver_opiniones"
+        android:id="@+id/txt_des_ver_promociones"
         android:layout_width="214dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -74,8 +74,8 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_nombre_ver_opiniones"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_ver_opiniones" />
+        app:layout_constraintStart_toStartOf="@+id/txt_titulo_ver_promociones"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_ver_promociones" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

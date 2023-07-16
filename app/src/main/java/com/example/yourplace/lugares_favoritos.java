@@ -110,7 +110,7 @@ MatrixCursor datos;
                 "Ciber cafe \"Marianas Web\"",
                 "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "www.faceoobk.com",
                 "barberia@hotmail.com",
                 "5576166860"});
 

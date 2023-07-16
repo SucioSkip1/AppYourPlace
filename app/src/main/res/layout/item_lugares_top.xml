@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/diseno_txt"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_item_lista_lugares_top"
+        android:layout_width="120dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/des_item_lista_lugares_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_screens"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_item_lista_lugares_top"
+        app:layout_constraintEnd_toEndOf="@+id/item_lista_lugares_top_mapa"
+        app:layout_constraintStart_toStartOf="@+id/item_lista_lugares_top_mapa"
+        app:layout_constraintTop_toBottomOf="@+id/item_lista_lugares_top_mapa"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/item_lista_lugares_top_mapa"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/des_btn"
+        android:gravity="center"
+        android:textColor="#323131"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_item_lista_lugares_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,11 +32,6 @@ public class perfilLocales extends AppCompatActivity {
         txtDir = findViewById(R.id.txt_dir_perfil_locales);
         imgLocal_perfil = findViewById(R.id.img_Local_Perfil_Locales);
 
-
-
-
-
-
         Bundle recLugaresFav= this.getIntent().getExtras();
         int imgLocal = Integer.parseInt(recLugaresFav.getString("imgLugaresFav"));
         String nomLocal1 = recLugaresFav.getString("nombreLocalLugaresFav");
