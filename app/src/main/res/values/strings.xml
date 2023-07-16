@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">YourPlace</string>
     <string name="mensaje_logo" translatable="false">YOUR PLACE</string>
     <string name="eslogan">Tu app de confianza</string>
@@ -70,6 +70,9 @@
     <string name="logo_google">Logo Google</string>
     <string name="img_twitter">Logo Twitter</string>
     <string name="img_facebook">Logo Facebook</string>
+    <string name="usa_la_app_para" tools:ignore="MissingTranslation">•Ver negocios cerca de ti\n•Opinar sobre negocios\n•Recibir cupones y promociones cerca de ti\n•Subir fotos de negocios\nY muchas cosas mas…\n</string>
+    <string name="usalaapp_para_negocio" tools:ignore="MissingTranslation">•Subir tu negocio\n•Administrar tu negocio\n•Ofrecer servicio\n•Subir fotos\nY mucho mas…\n</string>
+
     <string-array name="calificacionServicio">
         <item>Elije una opcion</item>
         <item>Malo</item>
@@ -78,5 +81,21 @@
         <item>Excelente</item>
     </string-array>
 
-
+    <string-array name="generaQR">
+        <item>Elije una opcion</item>
+        <item>Generar QR Catalogo</item>
+        <item>Generar QR Local</item>
+    </string-array>
+    <string-array name="formaPago">
+        <item>Elije una opcion</item>
+        <item>Efectivo</item>
+        <item>Tarjeta</item>
+    </string-array>
+    <string-array name="distanciaAnuncio">
+        <item>Elije una opcion</item>
+        <item>1Km</item>
+        <item>2Km</item>
+        <item>5Km</item>
+        <item>10Km</item>
+    </string-array>
 </resources>

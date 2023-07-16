@@ -12,7 +12,7 @@
         style="@style/diseño_botones"
         android:layout_width="89dp"
         android:layout_height="53dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="70dp"
         android:onClick="buscador"
         android:text="@string/btn_enviar"
         android:textColor="#151414"
@@ -28,7 +28,6 @@
         android:layout_width="212dp"
         android:layout_height="53dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="110dp"
         android:drawableEnd="@drawable/reloj"
         android:drawableTint="#000000"
@@ -40,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintStart_toEndOf="@+id/btn_enviar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btn_enviar" />
 
     <Button
         android:id="@+id/button3"
@@ -103,9 +102,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:text="@string/tv_lugares_top"
-        android:textColor="#050505"
+        android:textColor="#000000"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/button5"
         app:layout_constraintStart_toStartOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
@@ -115,9 +116,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="@string/tv_promociones_top"
         android:textColor="#000000"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/button5"
         app:layout_constraintStart_toStartOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/rv_lista_lugares_top" />
@@ -125,9 +128,10 @@
     <Button
         android:id="@+id/button6"
         style="@style/diseño_botones"
-        android:layout_width="323dp"
+        android:layout_width="0dp"
         android:layout_height="83dp"
 
+        android:layout_marginTop="8dp"
         android:onClick="irPromociones"
         android:text="@string/btn_ver_promociones"
         android:textColor="#000000"
@@ -135,12 +139,14 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/rv_lista_lugares_top"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="@+id/rv_lista_lugares_top"
-        app:layout_constraintTop_toBottomOf="@+id/tv_promociones_top" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_promociones_top"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_lista_lugares_top"
-        android:layout_width="352dp"
+        android:layout_width="0dp"
         android:layout_height="142dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/txt_lugares_top"

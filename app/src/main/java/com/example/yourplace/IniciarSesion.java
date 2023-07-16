@@ -12,9 +12,10 @@ import android.widget.Toast;
 import java.util.Objects;
 
 public class IniciarSesion extends AppCompatActivity {
-
+    String Msj;
+    WebServiceInicioSesion obj = new WebServiceInicioSesion();
     //Declaran variables
-    EditText Correo ,Contraseña;
+    EditText Nombre ,Contraseña;
 
 
     @Override
@@ -23,7 +24,7 @@ public class IniciarSesion extends AppCompatActivity {
         setContentView(R.layout.activity_iniciar_sesion);
         Objects.requireNonNull(getSupportActionBar()).hide();
       //Vincular vista con su instancia
-     Correo =findViewById(R.id.plain_txt_InCorreo);
+        Nombre =findViewById(R.id.plain_txt_InCorreo);
      Contraseña = findViewById(R.id.txt_password);
 
 
@@ -35,34 +36,18 @@ public class IniciarSesion extends AppCompatActivity {
         startActivity(i);
     }
     public void llenarCampos(View view){
-        Correo.setText("Edu");
+        Nombre.setText("Edu");
         Contraseña.setText("123");
     }
     public void metodoLog(View view){
         // Acciones
-        String usr = Correo.getText().toString();
-        String nom = "Edu";
-        String pass = "123";
-
-
-        if (Correo.getText().toString().isEmpty() && Contraseña.getText().toString().isEmpty())
-
+        if (Nombre.getText().toString().isEmpty() || Contraseña.getText().toString().isEmpty())
         {
             Toast.makeText(this, "Las casillas estan vacias", Toast.LENGTH_SHORT).show();
 
         }else {
-            if (Correo.getText().toString().equals(nom) && Contraseña.getText().toString().equals(pass)) {
-
-                Toast.makeText(this, "Verificando datos", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(getApplicationContext(),seleccionaUsuario.class);
-                startActivity(i);
-            } else {
-                Correo.setText("");
-                Contraseña.setText("");
-                Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
-            }
+            Intent i = new Intent(getApplicationContext(),seleccionaUsuario.class);
+            startActivity(i);
         }
-
-
 }
     }

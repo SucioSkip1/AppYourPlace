@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -12,13 +13,15 @@ import java.util.Objects;
 
 public class Crear_Cuenta extends AppCompatActivity {
     EditText Nombre, Apellido, Correo, Contraseña, ConfirmarContraseña;
+    String Msj;
+    WebServiceInicioSesion obj = new WebServiceInicioSesion();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_cuenta);
         Objects.requireNonNull(getSupportActionBar()).hide();
-
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         Nombre = findViewById(R.id.txt_Nombre);
         Apellido = findViewById(R.id.txt_apellido);
         Correo = findViewById(R.id.txt_correo);
@@ -35,32 +38,44 @@ public void llenarCampos(View view){
 }
 
     public void irInicio(View view) {
-
-        if (Nombre.length() == 0) {
-            Toast.makeText(this, "Ingrese un nombre", Toast.LENGTH_SHORT).show();
-        }
-        if (Apellido.length() == 0) {
-            Toast.makeText(this, "Ingrese un apellido", Toast.LENGTH_SHORT).show();
-        }
-
-        if (Correo.length() == 0) {
-            Toast.makeText(this, "Ingrese un correo", Toast.LENGTH_SHORT).show();
-        }
-        if (Contraseña.length() == 0) {
-            Toast.makeText(this, "Ingrese una contraseña", Toast.LENGTH_SHORT).show();
-        }
-        if (ConfirmarContraseña.length() == 0) {
-            Toast.makeText(this, "Confirme la contraseña", Toast.LENGTH_SHORT).show();
+        if(Nombre.getText().toString().isEmpty()||
+                Apellido.getText().toString().isEmpty()
+                ||Correo.getText().toString().isEmpty()
+                ||         Contraseña.getText().toString().isEmpty()||
+                ConfirmarContraseña.getText().toString().isEmpty())
+        {
+            Toast.makeText(this, "Alerta,Te faltan datos por llenar!",
+                    Toast.LENGTH_SHORT).show();
         }
 
-        else {
-        Intent i = new Intent(getApplicationContext(), IniciarSesion.class);
-        startActivity(i);
-        Toast.makeText(this, "Cuenta creada exitosamente", Toast.LENGTH_SHORT).show();
+        else{
+            String password = Contraseña.getText().toString();
+            String confirmPassword = ConfirmarContraseña.getText().toString();
+            if(!password.equals(confirmPassword)){
+                Contraseña.setError("Las contraseñas no coinciden");
+                ConfirmarContraseña.setError("Las contraseñas no coinciden");
+            }else{
+                ConfirmarContraseña.setError(null);
+            }
+            Msj = obj.insertar(Nombre.getText().toString(),
+                    Apellido.getText().toString(),
+                    Correo.getText().toString(),
+                    Contraseña.getText().toString());
+            Toast.makeText(this, Msj, Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(getApplicationContext(),IniciarSesion.class);
+            startActivity(i);
+
+
+
+        }
+
+
+
     }
+
+    public void validarPassword(){
+
     }
-
-
 
 
 

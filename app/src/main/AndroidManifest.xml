@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission
         android:name="android.permission.CAMERA"
         tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
@@ -18,7 +20,11 @@
         android:roundIcon="@mipmap/img_logo_fin"
         android:supportsRtl="true"
         android:theme="@style/Theme.YourPlace"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".catalogo_interfaz_negocio"
+            android:exported="false" />
         <activity
             android:name=".selPromocion"
             android:exported="false" />

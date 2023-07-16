@@ -9,105 +9,136 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
         android:text="Generar QR"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="186dp"
-        android:layout_height="171dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.926"
-        app:srcCompat="@drawable/codigoqr" />
-
-    <Button
-        android:id="@+id/button7"
-        style="@style/diseño_botones"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/txt_ID_QR_generarqr"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Generar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="ID QR"
+        android:inputType="text"
         android:textColor="#000000"
-        android:textColorHighlight="#DF1010"
-        android:textSize="16sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672" />
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        tools:ignore="TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/txt_nombre_generar_qr"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="QR de Local"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="NOMBRE QR"
+        android:inputType="text"
         android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123" />
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/txt_ID_QR_generarqr"
+        app:layout_constraintStart_toStartOf="@+id/txt_ID_QR_generarqr"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ID_QR_generarqr"
+        tools:ignore="TouchTargetSizeCheck" />
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="170dp"
-        android:layout_height="178dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363"
-        app:srcCompat="@drawable/codigoqr" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/seleccion_generar_qr"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="QR de Catalogo"
+        android:layout_marginTop="8dp"
+        android:entries="@array/generaQR"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nombre_generar_qr"
+        app:layout_constraintStart_toStartOf="@+id/txt_nombre_generar_qr"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_generar_qr"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txt_generar_qr_notas"
+        android:layout_width="0dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="NOTAS"
+        android:inputType="text"
         android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574" />
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/seleccion_generar_qr"
+        app:layout_constraintStart_toStartOf="@+id/seleccion_generar_qr"
+        app:layout_constraintTop_toBottomOf="@+id/seleccion_generar_qr" />
 
     <Button
         android:id="@+id/button2"
         style="@style/diseño_botones"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Generar"
-        android:textColor="#000000"
-        android:textColorHighlight="#DF1010"
-        android:textSize="16sp"
-        app:backgroundTint="@null"
+        android:layout_marginTop="32dp"
+        android:onClick="insertarQR"
+        android:text="Insertar QR"
+        app:icon="@drawable/lapiz"
+        app:iconSize="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_generar_qr_notas"
+        app:layout_constraintStart_toStartOf="@+id/txt_generar_qr_notas"
+        app:layout_constraintTop_toBottomOf="@+id/txt_generar_qr_notas" />
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="buscarQR"
+        android:text="Buscar QR"
+        app:icon="@drawable/buscadddd"
+        app:iconGravity="end"
+        app:iconSize="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button17"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="actualizarQR"
+        android:text="Actualizar QR"
+        app:icon="@drawable/editar"
+        app:iconSize="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button18"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="borrarQR"
+        android:text="Borrar"
+        app:icon="@drawable/borrar"
+        app:iconGravity="end"
+        app:iconSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206"
-        tools:ignore="OnClick" />
+        app:layout_constraintEnd_toEndOf="@+id/button17"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/button17"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

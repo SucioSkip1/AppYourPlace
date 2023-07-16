@@ -69,7 +69,7 @@ RecyclerView RV;
 
 
     public void irCatalogo(View view){
-        Intent i = new Intent(getApplicationContext(), catalogo.class);
+        Intent i = new Intent(getApplicationContext(), catalogo_interfaz_negocio.class);
         startActivity(i);
 
     }

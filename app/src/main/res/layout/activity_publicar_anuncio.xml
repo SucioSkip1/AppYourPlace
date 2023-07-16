@@ -9,162 +9,124 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:text="Publica tu anuncio"
         android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button8"
         style="@style/diseño_botones"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:onClick="irPublicarAnuncio"
         android:text="Publicar"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="20dp"
         app:backgroundTint="@null"
         app:icon="@drawable/publi"
         app:iconGravity="end"
         app:iconSize="30dp"
         app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_des_publicar_anuncio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_des_publicar_anuncio"
+        app:layout_constraintTop_toBottomOf="@+id/txt_des_publicar_anuncio" />
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button21"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Nombre del anuncio"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintEnd_toEndOf="@+id/button20"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button20"
+        app:layout_constraintTop_toBottomOf="@+id/button20"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button19"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/button8"
+        app:layout_constraintStart_toStartOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Spinner
+        android:id="@+id/sp_metodo_pago_publicar_anuncio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/sp_distancia_anuncio_publicar_anuncio"
+        app:layout_constraintStart_toStartOf="@+id/sp_distancia_anuncio_publicar_anuncio"
+        app:layout_constraintTop_toBottomOf="@+id/sp_distancia_anuncio_publicar_anuncio" />
+
+    <Button
+        android:id="@+id/button20"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/button19"
+        app:layout_constraintStart_toStartOf="@+id/button19"
+        app:layout_constraintTop_toBottomOf="@+id/button19" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txt_des_publicar_anuncio"
+        android:layout_width="361dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Tacos 2x1"
+        android:hint="Descripcion de anuncio"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.174"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Efe"
-        android:text="Metodo pago"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/sp_metodo_pago_publicar_anuncio"
+        app:layout_constraintStart_toStartOf="@+id/sp_metodo_pago_publicar_anuncio"
+        app:layout_constraintTop_toBottomOf="@+id/sp_metodo_pago_publicar_anuncio" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_nombre_publicar_anuncio"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Efectivo, tarjeta"
+        android:hint="Nombre del anuncio!"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577" />
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/sp_distancia_anuncio_publicar_anuncio"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Tiempo de anuncio"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nombre_publicar_anuncio"
+        app:layout_constraintStart_toStartOf="@+id/txt_nombre_publicar_anuncio"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_publicar_anuncio" />
 
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="1:00"
-        android:inputType="time"
-        android:minHeight="48dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Notas u observaciones"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.665" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="172dp"
-        android:ems="10"
-        android:hint="Escribe un mensaje"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.174"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
