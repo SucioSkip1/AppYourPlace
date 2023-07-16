@@ -68,6 +68,9 @@ public void buscador(View view){
             startActivity(i);
         }
     }
-
+    public void irPromociones (View view){
+        Intent i = new Intent(getApplicationContext(), ver_promociones.class);
+        startActivity(i);
+    }
 
 }

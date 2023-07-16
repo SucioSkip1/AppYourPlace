@@ -70,6 +70,13 @@
     <string name="logo_google">Logo Google</string>
     <string name="img_twitter">Logo Twitter</string>
     <string name="img_facebook">Logo Facebook</string>
+    <string-array name="calificacionServicio">
+        <item>Elije una opcion</item>
+        <item>Malo</item>
+        <item>Regular</item>
+        <item>Bueno</item>
+        <item>Excelente</item>
+    </string-array>
 
 
 </resources>
