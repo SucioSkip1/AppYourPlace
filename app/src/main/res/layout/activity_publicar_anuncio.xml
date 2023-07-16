@@ -12,12 +12,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:gravity="center"
         android:text="Publica tu anuncio"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        android:textSize="34sp"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,8 +29,8 @@
         style="@style/diseño_botones"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:onClick="irPublicarAnuncio"
+        android:layout_marginTop="8dp"
+        android:onClick="publicarAnuncio"
         android:text="Publicar"
         android:textColor="#000000"
         android:textSize="20dp"
@@ -43,12 +45,41 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_des_publicar_anuncio" />
 
     <Button
+        android:id="@+id/button19"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="buscarAnuncio"
+        android:text="Buscar anuncio"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/button8"
+        app:layout_constraintStart_toStartOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button20"
+        style="@style/diseño_botones"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:onClick="actualizarAnuncio"
+        android:text="Editar anuncio"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/button19"
+        app:layout_constraintStart_toStartOf="@+id/button19"
+        app:layout_constraintTop_toBottomOf="@+id/button19" />
+
+    <Button
         android:id="@+id/button21"
         style="@style/diseño_botones"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Button"
+        android:text="Borrar anuncio"
+        android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button20"
@@ -57,42 +88,9 @@
         app:layout_constraintTop_toBottomOf="@+id/button20"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button19"
-        style="@style/diseño_botones"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Button"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/button8"
-        app:layout_constraintStart_toStartOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
-
-    <Spinner
-        android:id="@+id/sp_metodo_pago_publicar_anuncio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/sp_distancia_anuncio_publicar_anuncio"
-        app:layout_constraintStart_toStartOf="@+id/sp_distancia_anuncio_publicar_anuncio"
-        app:layout_constraintTop_toBottomOf="@+id/sp_distancia_anuncio_publicar_anuncio" />
-
-    <Button
-        android:id="@+id/button20"
-        style="@style/diseño_botones"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Button"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/button19"
-        app:layout_constraintStart_toStartOf="@+id/button19"
-        app:layout_constraintTop_toBottomOf="@+id/button19" />
-
     <EditText
         android:id="@+id/txt_des_publicar_anuncio"
-        android:layout_width="361dp"
+        android:layout_width="0dp"
         android:layout_height="113dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -101,6 +99,7 @@
         android:minHeight="48dp"
         android:textColor="#000000"
         android:textColorHint="#000000"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/sp_metodo_pago_publicar_anuncio"
         app:layout_constraintStart_toStartOf="@+id/sp_metodo_pago_publicar_anuncio"
         app:layout_constraintTop_toBottomOf="@+id/sp_metodo_pago_publicar_anuncio" />
@@ -109,24 +108,56 @@
         android:id="@+id/txt_nombre_publicar_anuncio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Nombre del anuncio!"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:onClick="buscarAnuncio"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/textView23"
-        app:layout_constraintStart_toStartOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/txt_id_anuncio_publicar_anuncio"
+        app:layout_constraintStart_toStartOf="@+id/txt_id_anuncio_publicar_anuncio"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id_anuncio_publicar_anuncio" />
+
+    <Spinner
+        android:id="@+id/sp_metodo_pago_publicar_anuncio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/formaPago"
+        app:layout_constraintEnd_toEndOf="@+id/sp_distancia_anuncio_publicar_anuncio"
+        app:layout_constraintStart_toStartOf="@+id/sp_distancia_anuncio_publicar_anuncio"
+        app:layout_constraintTop_toBottomOf="@+id/sp_distancia_anuncio_publicar_anuncio"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Spinner
         android:id="@+id/sp_distancia_anuncio_publicar_anuncio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:entries="@array/distanciaAnuncio"
         app:layout_constraintEnd_toEndOf="@+id/txt_nombre_publicar_anuncio"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_nombre_publicar_anuncio"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_publicar_anuncio" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_publicar_anuncio"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txt_id_anuncio_publicar_anuncio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="ID anuncio"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#020202"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
