@@ -50,6 +50,13 @@ public class perfilLocales extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(),ver_opiniones.class);
         startActivity(i);
     }
+    public void verFotos(View view){
+        Bundle envioVerFotosInterfaz = new Bundle();
+        envioVerFotosInterfaz.putString("img_perfil_locales", String.valueOf(imgLocal_perfil));
+        Intent i = new Intent(getApplicationContext(), ver_fotos_interfaz.class);
+        i.putExtras(envioVerFotosInterfaz);
+                startActivity(i);
+    }
     public void streetview(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(gps));
         startActivity(intent);
@@ -83,8 +90,9 @@ public class perfilLocales extends AppCompatActivity {
         startActivity(intent);
     }
     public void abrirPagina(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(web));
-        startActivity(intent);
+
+        Intent intentPA = new Intent(Intent.ACTION_VIEW, Uri.parse(web));
+        startActivity(intentPA);
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {

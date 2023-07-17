@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class perfil_usuario extends AppCompatActivity {
 TextView txtNombre,txtBio,txtOpinion,txtPuntuacion;
 ImageView img_usuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Objects.requireNonNull(getSupportActionBar()).hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_usuario);
         txtNombre = findViewById(R.id.txt_nombre_perfil_usuario);

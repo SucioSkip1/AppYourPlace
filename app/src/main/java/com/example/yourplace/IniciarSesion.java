@@ -43,6 +43,8 @@ public class IniciarSesion extends AppCompatActivity {
         // Acciones
         if (Nombre.getText().toString().isEmpty() || Contraseña.getText().toString().isEmpty())
         {
+            Nombre.setError("Ingrese el error");
+            Contraseña.setError("Ingrese su contraseña");
             Toast.makeText(this, "Las casillas estan vacias", Toast.LENGTH_SHORT).show();
 
         }else {

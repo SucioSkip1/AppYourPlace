@@ -23,6 +23,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".interfaz_ver_citas"
+            android:exported="false" />
+        <activity
+            android:name=".ver_fotos_interfaz"
+            android:exported="false" />
+        <activity
             android:name=".catalogo_interfaz_negocio"
             android:exported="false" />
         <activity

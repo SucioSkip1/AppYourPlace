@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/des_btn"
-    tools:context=".perfilLocales">
+    tools:context=".cascaron_negocio_interfazNegocio">
 
     <ImageView
-        android:id="@+id/img_Local_Perfil_Locales"
+        android:id="@+id/img_cascaron_negocio"
         android:layout_width="304dp"
         android:layout_height="244dp"
         android:background="@drawable/diseno_txt"
@@ -22,11 +22,11 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/btn_gps"
+        android:id="@+id/btn_gps_cascaron_negocio"
         style="@style/diseño_botones"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:onClick="streetview"
+        android:onClick="irACatalogo"
         android:text="Ver catalogo"
         android:textColor="#000000"
         android:textSize="13dp"
@@ -43,11 +43,11 @@
         tools:ignore="TextSizeCheck" />
 
     <Button
-        android:id="@+id/btn_tel"
+        android:id="@+id/btn_ver_citas_cascaron_interfaz_negocio"
         style="@style/diseño_botones"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:onClick="llamarTelefono"
+        android:onClick="irVerCitas"
         android:text="Ver citas"
         android:textColor="#000000"
         android:textSize="13dp"
@@ -64,11 +64,10 @@
         tools:ignore="TextSizeCheck" />
 
     <Button
-        android:id="@+id/btn_correo"
+        android:id="@+id/btn_ver_chats_cascaron"
         style="@style/diseño_botones"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:onClick="mandarCorreo"
         android:text="Ver chats"
         android:textColor="#000000"
         android:textSize="13dp"
@@ -85,11 +84,11 @@
         tools:ignore="TextSizeCheck" />
 
     <Button
-        android:id="@+id/btn_web"
+        android:id="@+id/btn_publicar_anuncio_cascaron_interfaz_negocio"
         style="@style/diseño_botones"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:onClick="abrirPagina"
+        android:onClick="irPublicarAnuncio"
         android:text="Publicar anuncio"
         android:textColor="#000000"
         android:textSize="13dp"
@@ -106,7 +105,7 @@
         tools:ignore="TextSizeCheck" />
 
     <TextView
-        android:id="@+id/txt_dir_perfil_locales"
+        android:id="@+id/txt_des_cascaron_negocio_interfaz"
         android:layout_width="337dp"
         android:layout_height="124dp"
         android:background="@drawable/dis_back_txt"
@@ -122,7 +121,7 @@
         app:layout_constraintVertical_bias="0.583" />
 
     <TextView
-        android:id="@+id/txt_nombre_local_perfil_locales"
+        android:id="@+id/txt_nombre_cascaron_negocio_interfaz"
         style="@style/diseño_botones"
         android:layout_width="335dp"
         android:layout_height="41dp"
@@ -141,7 +140,7 @@
         app:layout_constraintVertical_bias="0.424" />
 
     <Button
-        android:id="@+id/btn_ver_fotos"
+        android:id="@+id/btn_programar_local_cascaron"
         style="@style/diseño_botones"
         android:layout_width="140dp"
         android:layout_height="50dp"
@@ -159,11 +158,11 @@
         tools:ignore="TextSizeCheck" />
 
     <Button
-        android:id="@+id/bt_ver_opiniones"
+        android:id="@+id/bt_ver_opiniones_cascaron_negocio"
         style="@style/diseño_botones"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:onClick="verOpiniones"
+        android:onClick="irVerOpiniones"
         android:text="Ver opiniones"
         android:textColor="#212121"
         android:textSize="13dp"

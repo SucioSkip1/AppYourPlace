@@ -40,14 +40,20 @@ private List <String> nombreLocal = new ArrayList<>();
     //Creacionb instancia
         adaptador = new listaLugaresTop(nombreLocal, desLocal, imgLocal);
         listaLugaresTop.setAdapter(adaptador);
-        nombreLocal.add("Papeleria");
+        nombreLocal.add("Barberia");
+        nombreLocal.add("Refaccionaria");
         nombreLocal.add("Vulcanizadora");
+        nombreLocal.add("Papeleria");
 
         desLocal.add("Obtuvo 5 estrellas!");
-        desLocal.add("Regalo un servicio!");
+        desLocal.add("Alcanzo el nivel 5!");
+        desLocal.add("Compartio una foto");
+        desLocal.add("Se volvio canon!");
 
-        imgLocal.add(R.drawable.vulca);
-        imgLocal.add(R.drawable.vulca);
+        imgLocal.add(R.drawable.barbe);
+        imgLocal.add(R.drawable.img_chaveta);
+        imgLocal.add(R.drawable.barbe);
+        imgLocal.add(R.drawable.img_chaveta);
         adaptador.notifyDataSetChanged();
     }
 public void buscador(View view){

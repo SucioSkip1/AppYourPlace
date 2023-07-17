@@ -143,6 +143,7 @@
         style="@style/diseño_botones"
         android:layout_width="140dp"
         android:layout_height="50dp"
+        android:onClick="verFotos"
         android:text="Ver Fotos"
         android:textColor="#000000"
         android:textSize="13dp"

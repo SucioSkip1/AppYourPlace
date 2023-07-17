@@ -29,7 +29,7 @@ MatrixCursor datos;
                 "Refaccionaria \"Chaveta\"",
                 "Av. P. del Sur 350, Morelos 3ra Secc, 54935 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "chaveta@hotmal.com",
                     "55761668660"});
         datos.addRow(new Object[]{
@@ -38,7 +38,7 @@ MatrixCursor datos;
                 "TORTILLERIA \"Gerardo\"",
                 "Av. P. del Sur 350, Morelos 3ra Secc, 54930 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "chaveta@hotmal.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -47,7 +47,7 @@ MatrixCursor datos;
                 "Panaderia \"Pan delicioso\"",
                 "Av. P. del Sur 350, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "panaderia@hotmal.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -56,7 +56,7 @@ MatrixCursor datos;
                 "Barberia \"Los amigos\"",
                 "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "barberia@hotmail.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -65,7 +65,7 @@ MatrixCursor datos;
                 "Vulcanizadora \"El pepe\"",
                 "Av. Carlos del canal 376, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "barberia@hotmail.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -74,7 +74,7 @@ MatrixCursor datos;
                 "Papeleria \"La peke\"",
                 "Av. Carlos del canal 678, Morelos 3ra Secc, 54933 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "barberia@hotmail.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -83,7 +83,7 @@ MatrixCursor datos;
                 "Zapateria \"El zapato feliz\"",
                 "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "barberia@hotmail.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -92,7 +92,7 @@ MatrixCursor datos;
                 "Carniceria \"Toro loco\"",
                 "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "barberia@hotmail.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -101,7 +101,7 @@ MatrixCursor datos;
                 "Papeleria\"El libro feliz\"",
                 "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.google.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "barberia@hotmail.com",
                 "5576166860"});
         datos.addRow(new Object[]{
@@ -110,7 +110,7 @@ MatrixCursor datos;
                 "Ciber cafe \"Marianas Web\"",
                 "Av. Carlos del canal 351, Morelos 3ra Secc, 54936 San Pablo de las Salinas, Méx.",
                 "google.streetview:cbll=19.680228,-99.083703=&cbp=3,75,158.8,77.6",
-                "www.faceoobk.com",
+                "https://www.google.com/?&bih=970&biw=1879&client=opera-gx&hs=lAa&hl=es-419",
                 "barberia@hotmail.com",
                 "5576166860"});
 
