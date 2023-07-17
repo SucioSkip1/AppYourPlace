@@ -38,6 +38,10 @@ public class catalogo_interfaz_negocio extends AppCompatActivity {
         )
 
         {
+                txt_id.setError("Ingrese el ID");
+                txtnombre_corte.setError("Ingrese el nombre del corte");
+                txtprecio.setError("Ingrese el precio");
+                txt_descorte.setError("Ingrese una descripcion");
 
             Toast.makeText(this, "Alerta!,Datos faltanes", Toast.LENGTH_SHORT).show();
         }
@@ -57,6 +61,7 @@ public class catalogo_interfaz_negocio extends AppCompatActivity {
 
     public void buscarCorte(View view){
             if (txt_id.getText().toString().isEmpty()){
+                txt_id.setError("Ingrese el ID a buscar");
                 Toast.makeText(this, "Alerta!,Datos faltanes", Toast.LENGTH_SHORT).show();
 
             }
@@ -92,7 +97,10 @@ public class catalogo_interfaz_negocio extends AppCompatActivity {
         )
 
         {
-
+            txt_id.setError("Ingrese el ID");
+            txtnombre_corte.setError("Ingrese el nombre del corte");
+            txtprecio.setError("Ingrese el precio");
+            txt_descorte.setError("Ingrese una descripcion");
             Toast.makeText(this, "Alerta!,Datos faltanes", Toast.LENGTH_SHORT).show();
         }
         else{
@@ -111,6 +119,7 @@ public class catalogo_interfaz_negocio extends AppCompatActivity {
     }
     public void borrar(View view){
         if (txt_id.getText().toString().isEmpty()) {
+            txt_id.setError("Ingrese el ID");
             Toast.makeText(this, "Agrega el ID a borrar", Toast.LENGTH_SHORT).show();
 
         }

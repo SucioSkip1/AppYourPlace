@@ -41,15 +41,23 @@ WS_PublicarAnuncio obj = new WS_PublicarAnuncio();
                 nombreAnuncio.getText().toString().isEmpty()
                 ||spDistancia.getSelectedItem().equals("Elija una opcion")||
                 spFormaPago.getSelectedItem().equals("Elija una opcion")||
-                desAnuncio.getText().toString().isEmpty()){
+                desAnuncio.getText().toString().isEmpty())
+        {
+            txt_id_anuncio.setError("Ingrese el ID");
             nombreAnuncio.setError("Coloque el nombre del anuncio");
             desAnuncio.setError("Escriba la descripcion del anuncio");
             Toast.makeText(this, "Faltan datos por llenar!", Toast.LENGTH_SHORT).show();
         }else{
+
         Msj = obj.insertar(txt_id_anuncio.getText().toString(),nombreAnuncio.getText().toString(),
                 spDistancia.getSelectedItem().toString(),
                 spFormaPago.getSelectedItem().toString(),
                 desAnuncio.getText().toString());
+            txt_id_anuncio.setText("");
+            nombreAnuncio.setText("");
+            spDistancia.setSelection(0);
+            spFormaPago.setSelection(0);
+            desAnuncio.setText("");
             Toast.makeText(this, Msj, Toast.LENGTH_SHORT).show();
         }
 
@@ -78,10 +86,6 @@ WS_PublicarAnuncio obj = new WS_PublicarAnuncio();
                 String dis = json_data.getString("DIST");
                 int index = obtenerIndiceDis(dis);
                 spDistancia.setSelection(index);
-
-
-
-
                 String p = json_data.getString("PAGO");
                 int i = obtenerIndicePago(p);
                 spFormaPago.setSelection(i);
@@ -96,24 +100,73 @@ WS_PublicarAnuncio obj = new WS_PublicarAnuncio();
         }
     }
     public void actualizarAnuncio(View view){
-        if (nombreAnuncio.getText().toString().isEmpty()
-                ||spDistancia.getSelectedItem().equals("Elija una opcion")||
+        if (      txt_id_anuncio.getText().toString().isEmpty() ||
+                nombreAnuncio.getText().toString().isEmpty()||
+        spDistancia.getSelectedItem().equals("Elija una opcion")||
                 spFormaPago.getSelectedItem().equals("Elija una opcion")||
-                desAnuncio.getText().toString().isEmpty()){
+                desAnuncio.getText().toString().isEmpty())
+        {
+            txt_id_anuncio.setError("Ingrese el ID");
             nombreAnuncio.setError("Coloque el nombre del anuncio");
             desAnuncio.setError("Escriba la descripcion del anuncio");
             Toast.makeText(this, "Faltan datos por llenar!", Toast.LENGTH_SHORT).show();
         }else{
-            Msj = obj.actualizar(txt_id_anuncio.getText().toString(),
+            Msj = obj.actualizar(
+                    txt_id_anuncio.getText().toString(),
                     nombreAnuncio.getText().toString(),
                     spDistancia.getSelectedItem().toString(),
                     spFormaPago.getSelectedItem().toString(),
                     desAnuncio.getText().toString());
             Toast.makeText(this, Msj, Toast.LENGTH_SHORT).show();
+            txt_id_anuncio.setText("");
+            nombreAnuncio.setText("");
+            spDistancia.setSelection(0);
+            spFormaPago.setSelection(0);
+            desAnuncio.setText("");
         }
 
 
     }
+    public void borrar(View view) {
+        if (txt_id_anuncio.getText().toString().isEmpty()) {
+            txt_id_anuncio.setError("Ingrese el ID");
+            Toast.makeText(getApplicationContext(), "Alerta!, Datos faltantes!", Toast.LENGTH_LONG).show();
+        } else {
+            Msj = obj.borrar(txt_id_anuncio.getText().toString());
+            //JSON PARSER -- Decodificar datos obtenidos del WEBSERVICE
+            try {
+                //Almacenar la respuesta JSON del servidor en un arreglo e tipo JSON
+                JSONArray jArray = new JSONArray(Msj);
+                //POr cada registro del arreglo JSON recuperado procesar...
+                JSONObject json_data = null;
+                for (int i = 0; i < jArray.length(); i++) {
+                    //EL JSON parser crea un OBJETO JSON por cada registro del arreglo
+                    json_data = jArray.getJSONObject(i);
+                }
+                txt_id_anuncio.setText(json_data.getString("ID_ANUNCIO"));
+
+
+
+            }//Si hay un problema on el JSON parser se captura e error
+            catch (JSONException e) {   //Se asocia el error a la salida en pantalla
+                Toast.makeText(getApplicationContext(), Msj, Toast.LENGTH_LONG).show();
+                txt_id_anuncio.setText("");
+                nombreAnuncio.setText("");
+                spDistancia.setSelection(0);
+                spFormaPago.setSelection(0);
+                desAnuncio.setText("");
+
+
+            }
+        }
+    }
+
+
+
+
+
+
+
     private int obtenerIndiceDis(String disa) {
         String[] dis = getResources().getStringArray(R.array.distanciaAnuncio);
         for (int i = 0; i <dis.length; i++) {
