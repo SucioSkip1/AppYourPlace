@@ -49,4 +49,8 @@ public class cascaron_negocio_interfazNegocio extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), interfaz_ver_citas.class);
         startActivity(i);
     }
+    public void irVerChats(View view){
+        Intent i = new Intent(getApplicationContext(), interfaz_ver_chats.class);
+        startActivity(i);
+    }
 }

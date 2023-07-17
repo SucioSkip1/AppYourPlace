@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background_screens">
+    android:background="@drawable/fondo_letras">
 
     <TextView
         android:id="@+id/txt_pago_ver_citas"
@@ -54,8 +54,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="108dp"
-        android:layout_height="85dp"
+        android:layout_width="110dp"
+        android:layout_height="99dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
