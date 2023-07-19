@@ -14,6 +14,7 @@ import java.util.Objects;
 public class Crear_Cuenta extends AppCompatActivity {
     EditText Nombre, Apellido, Correo, Contraseña, ConfirmarContraseña;
     String Msj;
+    Boolean validado;
     WebServiceInicioSesion obj = new WebServiceInicioSesion();
 
     @Override
@@ -38,12 +39,16 @@ public void llenarCampos(View view){
 }
 
     public void irInicio(View view) {
-        if(Nombre.getText().toString().isEmpty()||
-                Apellido.getText().toString().isEmpty()
+        if(Nombre.getText().toString().isEmpty()
+                ||Apellido.getText().toString().isEmpty()
                 ||Correo.getText().toString().isEmpty()
-                ||         Contraseña.getText().toString().isEmpty()||
+                ||Contraseña.getText().toString().isEmpty()||
                 ConfirmarContraseña.getText().toString().isEmpty())
         {
+            Nombre.setError("Ingrese su nombre!");
+            Apellido.setError("Ingrese su apellido");
+            Correo.setError("Ingrese su correo");
+            Contraseña.setError("Ingrese una contraseña");
             Toast.makeText(this, "Alerta,Te faltan datos por llenar!",
                     Toast.LENGTH_SHORT).show();
         }
@@ -52,18 +57,25 @@ public void llenarCampos(View view){
             String password = Contraseña.getText().toString();
             String confirmPassword = ConfirmarContraseña.getText().toString();
             if(!password.equals(confirmPassword)){
+
                 Contraseña.setError("Las contraseñas no coinciden");
                 ConfirmarContraseña.setError("Las contraseñas no coinciden");
+
             }else{
                 ConfirmarContraseña.setError(null);
+                Msj = obj.insertar(Nombre.getText().toString(),
+                        Apellido.getText().toString(),
+                        Correo.getText().toString(),
+                        Contraseña.getText().toString());
+                if (Msj.equals("500")){
+                    Toast.makeText(this, "Esta cuenta ya existe", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Intent i = new Intent(getApplicationContext(),IniciarSesion.class);
+                    startActivity(i);
+                }
             }
-            Msj = obj.insertar(Nombre.getText().toString(),
-                    Apellido.getText().toString(),
-                    Correo.getText().toString(),
-                    Contraseña.getText().toString());
-            Toast.makeText(this, Msj, Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(getApplicationContext(),IniciarSesion.class);
-            startActivity(i);
+
 
 
 
@@ -73,9 +85,8 @@ public void llenarCampos(View view){
 
     }
 
-    public void validarPassword(){
 
-    }
+
 
 
 

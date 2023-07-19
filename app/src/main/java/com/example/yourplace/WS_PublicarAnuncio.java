@@ -21,7 +21,7 @@ public class WS_PublicarAnuncio {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/anuncio.php");
+            URL url = new URL("http://192.168.0.14:80/usu/anuncio.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -61,9 +61,9 @@ public class WS_PublicarAnuncio {
                 } else if (aux.equals("001")) {
                     aux = "Datos faltantes";
                 } else if (aux.equals("000")) {
-                    aux = "500 ";
+                    aux = "600";
                 }else {
-                    aux = "Registro insertado con exito!";
+                    aux = "500";
                 }
             }//SI NO HAY CONEXIÃƒâ€œN CON EL SERVIDOR...
             else {   //Se asocia el error a la salida en pantalla
@@ -81,7 +81,7 @@ public class WS_PublicarAnuncio {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/buscanuncio.php");
+            URL url = new URL("http://192.168.0.14:80/usu/buscanuncio.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -134,7 +134,7 @@ public class WS_PublicarAnuncio {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/anunedi.php");
+            URL url = new URL("http://192.168.0.14:80/usu/anunedi.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -195,7 +195,7 @@ public class WS_PublicarAnuncio {
 
         try {
             //Negociar con el servidor
-            URL url = new URL("http://192.168.0.9:80/usu/boanuncio.php");
+            URL url = new URL("http://192.168.0.14:80/usu/boanuncio.php");
             //Establecer conexion con el webservice, generar una conexion con el
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Decidir metodo de datos //Siempre POST

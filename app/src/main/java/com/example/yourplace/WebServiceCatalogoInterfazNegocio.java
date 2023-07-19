@@ -16,7 +16,7 @@ public class WebServiceCatalogoInterfazNegocio {
 
         try {
             //Negociar con el servidor
-            URL url = new URL("http://192.168.0.9:80/usu/borracorte.php");
+            URL url = new URL("http://192.168.0.14:80/usu/borracorte.php");
             //Establecer conexion con el webservice, generar una conexion con el
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Decidir metodo de datos //Siempre POST
@@ -74,7 +74,7 @@ public class WebServiceCatalogoInterfazNegocio {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/cata.php");
+            URL url = new URL("http://192.168.0.14:80/usu/cata.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -113,8 +113,12 @@ public class WebServiceCatalogoInterfazNegocio {
                 } else if (aux.equals("001")) {
                     aux = "Datos faltantes";
                 } else if (aux.equals("000")) {
-                    aux = "500 ";
-                }else {
+                    aux = "600 ";
+                }
+                else if (aux.equals("1062")){
+                    aux = "Registro duplicado!";
+                }
+                else {
                     aux = "Registro insertado con exito!";
                 }
             }//SI NO HAY CONEXIÃƒâ€œN CON EL SERVIDOR...
@@ -133,7 +137,7 @@ public class WebServiceCatalogoInterfazNegocio {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/busc_catalogo.php");
+            URL url = new URL("http://192.168.0.14:80/usu/busc_catalogo.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -187,7 +191,7 @@ public class WebServiceCatalogoInterfazNegocio {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/editcorte.php");
+            URL url = new URL("http://192.168.0.14:80/usu/editcorte.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -201,7 +205,7 @@ public class WebServiceCatalogoInterfazNegocio {
             //Verificar si el signo "?" es necesario como primer atributo
             String data ="&ID_CORTE="+URLEncoder.encode(id, "UTF-8")
                     +"&NOMBRE_CORTE="+URLEncoder.encode(nombre, "UTF-8")
-                    +"&PRECIO="+"$"+URLEncoder.encode(precio, "UTF-8")
+                    +"&PRECIO="+URLEncoder.encode(precio, "UTF-8")
                     +"&DES="+URLEncoder.encode(descripcion, "UTF-8");
             datSal.write(data);
             //Enviar datos al servidor
@@ -226,9 +230,11 @@ public class WebServiceCatalogoInterfazNegocio {
                 } else if (aux.equals("001")) {
                     aux = "Datos faltantes";
                 } else if (aux.equals("000")) {
-                    aux = "500 ";
-                }else {
-                    aux = "Registro insertado con exito!";
+                    aux = "600 ";
+                } else if (aux.equals("1062")) {
+                    aux = "Registro duplicado";
+                } else {
+                    aux = "Actualizado con exito!";
                 }
             }//SI NO HAY CONEXIÃƒâ€œN CON EL SERVIDOR...
             else {   //Se asocia el error a la salida en pantalla

@@ -17,7 +17,7 @@ public class WSGenerarQR {
 
         try {
             //Negociar con el servidor
-            URL url = new URL("http://192.168.0.9:80/usu/borrarqr.php");
+            URL url = new URL("http://192.168.0.14:80/usu/borrarqr.php");
             //Establecer conexion con el webservice, generar una conexion con el
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Decidir metodo de datos //Siempre POST
@@ -75,7 +75,7 @@ public class WSGenerarQR {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/crearqr.php");
+            URL url = new URL("http://192.168.0.14:80/usu/crearqr.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -134,7 +134,7 @@ public class WSGenerarQR {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/buscqR.php");
+            URL url = new URL("http://192.168.0.14:80/usu/buscqR.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -188,7 +188,7 @@ public class WSGenerarQR {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/editqr.php");
+            URL url = new URL("http://192.168.0.14:80/usu/editqr.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST

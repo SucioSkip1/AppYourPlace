@@ -48,17 +48,20 @@ WS_PublicarAnuncio obj = new WS_PublicarAnuncio();
             desAnuncio.setError("Escriba la descripcion del anuncio");
             Toast.makeText(this, "Faltan datos por llenar!", Toast.LENGTH_SHORT).show();
         }else{
+            Msj = obj.insertar(txt_id_anuncio.getText().toString(),nombreAnuncio.getText().toString(),
+                    spDistancia.getSelectedItem().toString(),
+                    spFormaPago.getSelectedItem().toString(),
+                    desAnuncio.getText().toString());
 
-        Msj = obj.insertar(txt_id_anuncio.getText().toString(),nombreAnuncio.getText().toString(),
-                spDistancia.getSelectedItem().toString(),
-                spFormaPago.getSelectedItem().toString(),
-                desAnuncio.getText().toString());
-            txt_id_anuncio.setText("");
-            nombreAnuncio.setText("");
-            spDistancia.setSelection(0);
-            spFormaPago.setSelection(0);
-            desAnuncio.setText("");
-            Toast.makeText(this, Msj, Toast.LENGTH_SHORT).show();
+            if (Msj.equals("500")){
+                Toast.makeText(this, "Ya ha insertado este ID", Toast.LENGTH_SHORT).show();
+                txt_id_anuncio.setText("");
+                txt_id_anuncio.setError("Cambia el ID");
+            }
+            else{
+                Toast.makeText(this, "Registro actualizado!", Toast.LENGTH_SHORT).show();
+            }
+
         }
 
 

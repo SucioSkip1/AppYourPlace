@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class webservice_ver_citas {
+public class WS_verNotificaciones {
     public String buscar() {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.14:80/usu/citas.php");
+            URL url = new URL("http://192.168.0.14:80/usu/vercatalogo.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -47,8 +47,5 @@ public class webservice_ver_citas {
         }
         return aux;
     }
-
-
-
 
 }

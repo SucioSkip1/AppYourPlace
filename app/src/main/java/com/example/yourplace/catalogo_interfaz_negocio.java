@@ -2,6 +2,7 @@ package com.example.yourplace;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -17,7 +18,7 @@ import java.util.Objects;
 public class catalogo_interfaz_negocio extends AppCompatActivity {
 
         EditText txt_id,txtnombre_corte,txtprecio,txt_descorte;
-    String Msj;
+    String msj,crud;
     WebServiceCatalogoInterfazNegocio obj = new WebServiceCatalogoInterfazNegocio();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,124 +31,106 @@ public class catalogo_interfaz_negocio extends AppCompatActivity {
         txt_descorte = findViewById(R.id.descripcion_interfaz_negocio);
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
     }
-    public void Insertar(View view){
-        if (txt_id.getText().toString().isEmpty()||
-            txtnombre_corte.getText().toString().isEmpty()||
-                txtprecio.getText().toString().isEmpty()||
-                txt_descorte.getText().toString().isEmpty()
-        )
-
-        {
-                txt_id.setError("Ingrese el ID");
-                txtnombre_corte.setError("Ingrese el nombre del corte");
-                txtprecio.setError("Ingrese el precio");
-                txt_descorte.setError("Ingrese una descripcion");
-
-            Toast.makeText(this, "Alerta!,Datos faltanes", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            Msj = obj.insertar(
-                    txt_id.getText().toString(),
-                    txtnombre_corte.getText().toString(),
-                    txtprecio.getText().toString(),
-                    txt_descorte.getText().toString());
-            Toast.makeText(getApplicationContext(), Msj, Toast.LENGTH_SHORT).show();
-            txt_id.setText("");
-            txtnombre_corte.setText("");
-            txtprecio.setText("");
-            txt_descorte.setText("");
-        }
-    }
-
-    public void buscarCorte(View view){
-            if (txt_id.getText().toString().isEmpty()){
-                txt_id.setError("Ingrese el ID a buscar");
-                Toast.makeText(this, "Alerta!,Datos faltanes", Toast.LENGTH_SHORT).show();
-
+    class MiAsyncTask extends AsyncTask<String, String, Void> {
+        @Override
+        protected Void doInBackground(String... parameter) {
+             msj = null;
+            switch (parameter[0]) {
+                case "insertar":
+                    msj = obj.insertar(parameter[1],parameter[2],parameter[3],parameter[4]);
+                    publishProgress(msj);
+                    break;
+                case "borrar":
+                    msj = obj.borrar(parameter[1]);
+                    publishProgress(msj);
+                    break;
+                case "actualizar":
+                    msj = obj.actualizar(parameter[1], parameter[2], parameter[3], parameter[4]);
+                    publishProgress(msj);
+                    break;
+                case "buscar":
+                    msj = obj.buscar(parameter[1]);
+                    publishProgress(msj);
+                    break;
             }
-        else{
-            Msj = obj.buscar(txt_id.getText().toString());
-                try {
-                    //Almacenar la respuesta JSON del servidor en un arreglo e tipo JSON
-                    JSONArray jArray = new JSONArray(Msj);
-                    //POr cada registro del arreglo JSON recuperado procesar...
-                    JSONObject json_data = null;
-                    for (int i = 0; i < jArray.length(); i++) {
-                        //EL JSON parser crea un OBJETO JSON por cada registro del arreglo
-                        json_data = jArray.getJSONObject(i);
-                    }
-                    txt_id.setText(json_data.getString("ID_CORTE"));
-                    txtnombre_corte.setText(json_data.getString("NOMBRE_CORTE"));
-                    txtprecio.setText(json_data.getString("PRECIO"));
-                    txt_descorte.setText(json_data.getString("DES"));
-
-
-
-                }//Si hay un problema on el JSON parser se captura e error
-                catch (JSONException e) {   //Se asocia el error a la salida en pantalla
-                    Toast.makeText(getApplicationContext(), Msj, Toast.LENGTH_LONG).show();
-                }
-            }
-    }
-    public void actualizar(View view){
-        if (txt_id.getText().toString().isEmpty()||
-                txtnombre_corte.getText().toString().isEmpty()||
-                txtprecio.getText().toString().isEmpty()||
-                txt_descorte.getText().toString().isEmpty()
-        )
-
-        {
-            txt_id.setError("Ingrese el ID");
-            txtnombre_corte.setError("Ingrese el nombre del corte");
-            txtprecio.setError("Ingrese el precio");
-            txt_descorte.setError("Ingrese una descripcion");
-            Toast.makeText(this, "Alerta!,Datos faltanes", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            Msj = obj.actualizar(
-                    txt_id.getText().toString(),
-                    txtnombre_corte.getText().toString(),
-                    txtprecio.getText().toString(),
-                    txt_descorte.getText().toString());
-            Toast.makeText(getApplicationContext(), Msj, Toast.LENGTH_SHORT).show();
-            txt_id.setText("");
-            txtnombre_corte.setText("");
-            txtprecio.setText("");
-            txt_descorte.setText("");
+            return null;
         }
 
-    }
-    public void borrar(View view){
-        if (txt_id.getText().toString().isEmpty()) {
-            txt_id.setError("Ingrese el ID");
-            Toast.makeText(this, "Agrega el ID a borrar", Toast.LENGTH_SHORT).show();
-
-        }
-
-        else{
-            Msj = obj.borrar(txt_id.getText().toString());
-            //JSON PARSER -- Decodificar datos obtenidos del WEBSERVICE
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            super.onProgressUpdate(progress);
             try {
-                //Almacenar la respuesta JSON del servidor en un arreglo e tipo JSON
-                JSONArray jArray = new JSONArray(Msj);
-                //POr cada registro del arreglo JSON recuperado procesar...
+                JSONArray jArray = new JSONArray(progress[0]);
                 JSONObject json_data = null;
                 for (int i = 0; i < jArray.length(); i++) {
-                    //EL JSON parser crea un OBJETO JSON por cada registro del arreglo
                     json_data = jArray.getJSONObject(i);
                 }
                 txt_id.setText(json_data.getString("ID_CORTE"));
+                txtnombre_corte.setText(json_data.getString("NOMBRE_CORTE"));
+                txtprecio.setText("$"+json_data.getString("PRECIO"));
+                txt_descorte.setText(json_data.getString("DES"));
 
-
-
-            }//Si hay un problema on el JSON parser se captura e error
-            catch (JSONException e) {   //Se asocia el error a la salida en pantalla
-                Toast.makeText(getApplicationContext(), Msj, Toast.LENGTH_LONG).show();
-                txt_id.setText("");
-                txtnombre_corte.setText("");
-                txtprecio.setText("");
-                txt_descorte.setText("");
+            } catch (JSONException e) {
+                Toast.makeText(getApplicationContext(), progress[0], Toast.LENGTH_LONG).show();
+                progress[0] = msj;
             }
         }
     }
+    public void buscar(View view){
+        if (txt_id.getText().toString().isEmpty()){
+            Toast.makeText(this, "Ingrese el ID a buscar.", Toast.LENGTH_SHORT).show();
+        }else{
+            crud = "buscar";
+            new MiAsyncTask().execute(crud,txt_id.getText().toString());
+
+        }
+    }
+    public void insertar(View view){
+        if (txt_id.getText().toString().isEmpty()||txtnombre_corte.getText().toString().isEmpty()||
+                txtprecio.getText().toString().isEmpty()||txt_descorte.getText().toString().isEmpty())
+        {
+            Toast.makeText(this, "Datos vacios, le faltan datos por llenar!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            crud = "insertar";
+            new MiAsyncTask().execute(crud,
+                    txt_id.getText().toString(),txtnombre_corte.getText().toString(),
+                    txtprecio.getText().toString(),txt_descorte.getText().toString());
+            txt_id.setText("");
+            txtprecio.setText("");
+            txtnombre_corte.setText("");
+            txt_descorte.setText("");
+
+        }
+    }
+
+    public void actualizar(View view){
+        if (txt_id.getText().toString().isEmpty()||txtnombre_corte.getText().toString().isEmpty()||
+                txtprecio.getText().toString().isEmpty()||txt_descorte.getText().toString().isEmpty()){
+            Toast.makeText(this, "Datos vacios, le faltan datos por llenar!", Toast.LENGTH_SHORT).show();
+
+        }else{
+            crud = "actualizar";
+            new MiAsyncTask().execute(crud,
+                    txt_id.getText().toString(),txtnombre_corte.getText().toString(),
+                    txtprecio.getText().toString(),txt_descorte.getText().toString());
+            txt_id.setText("");
+            txtprecio.setText("");
+            txtnombre_corte.setText("");
+            txt_descorte.setText("");
+        }
+    }
+    public void borrar (View view){
+        if (txt_id.getText().toString().isEmpty()){
+            Toast.makeText(this, "Faltan datos, escriba el ID!", Toast.LENGTH_SHORT).show();
+        }else{
+            crud = "borrar";
+            new MiAsyncTask().execute(crud,txt_id.getText().toString());
+
+
+
+
+        }
+    }
+
 }

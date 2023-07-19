@@ -3,6 +3,7 @@ package com.example.yourplace;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -14,7 +15,7 @@ public class WebServiceInicioSesion {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/iser.php");
+            URL url = new URL("http://192.168.0.14:80/usu/iser.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
@@ -53,12 +54,15 @@ public class WebServiceInicioSesion {
                 reader.close();//Cerrar buffer de lectura
                 if (aux.equals("2002")) {
                     aux = "ERROR DE CONEXION AL SERVIDOR DE DATOS";
+                } else if (aux.equals("000"))
+                {
+                    aux = "";
                 } else if (aux.equals("001")) {
-                    aux = "Datos faltantes";
+                    aux = "Faltan datos";
                 } else if (aux.equals("200")) {
                     aux = "Datos agregado con exito! ";
-                }else {
-                    aux = "Registro insertado con exito!";
+                } else {
+                    aux = "500";
                 }
             }//SI NO HAY CONEXIÃƒâ€œN CON EL SERVIDOR...
             else {   //Se asocia el error a la salida en pantalla
@@ -71,18 +75,32 @@ public class WebServiceInicioSesion {
         }
         return aux;
     }
+    /*
     public String buscar(String nombre , String password) {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/prueba/uno.php");
+            URL url = new URL("http://192.168.0.14:80/usu/sesio.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST
             conexion.setRequestMethod("POST");
             //Habilitar salida de datos
             conexion.setDoOutput(true);
+            OutputStreamWriter datSal = new OutputStreamWriter(conexion.getOutputStream());
+            //Agregar valores  en formato web --> atributo = "valor";
+            //Atributo
 
+            //Verificar si el signo "?" es necesario como primer atributo
+            String data ="NOMBRE="+URLEncoder.encode(nombre, "UTF-8")+
+                    "&PASSWORD="+URLEncoder.encode(password, "UTF-8");
+            //monitor.append("Valor en buffer: "+data+"\n");
+            //salida.append("dato enviado: " + data);
+            datSal.write(data);
+            //Enviar datos al servidor
+            datSal.flush();
+            datSal.close();//Cerrar buffer de escritura
+            //SI LA CONEXIÃ“N SE ESTABLECE CON Ã‰XITO
             if (conexion.getResponseCode()==HttpURLConnection.HTTP_OK){
                 BufferedReader reader = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
                 String linea = reader.readLine();
@@ -95,7 +113,10 @@ public class WebServiceInicioSesion {
                     aux = "ERROR DE CONEXION AL SERVIDOR DE DATOS";
                 } else if (aux.equals("001")) {
                     aux = "422";
-                } else if (aux.equals("000")) {
+                }
+                else if(aux.equals("100")){
+                        aux="500";
+                }else if (aux.equals("000")) {
                     aux = "No existen registros ";
                 }
             }
@@ -109,5 +130,56 @@ public class WebServiceInicioSesion {
         }
         return aux;
     }
+*/
+    private static final String link = "http://192.168.0.14:80/usu/";
+    public static String login(String usu, String pass) {
+        String response = "";
+        try {
+            URL url = new URL(link + "validar.php");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setDoOutput(true);
+            OutputStream outputStream = connection.getOutputStream();
+            String data = "NOMBRE=" + usu + "&PASSWORD=" + pass;
+            outputStream.write(data.getBytes());
+            outputStream.flush();
+            outputStream.close();
+            int responseCode = connection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String line;
+                StringBuilder stringBuilder = new StringBuilder();
+                while ((line = bufferedReader.readLine()) != null) {
+                    stringBuilder.append(line);
+                }
+                bufferedReader.close();
+                response = stringBuilder.toString();
+            } else {
+                response = "Error en la conexión";
+            }
+            connection.disconnect();
+        } catch (IOException e) {
+            e.printStackTrace();
+            response = "Error: " + e.getMessage();
+        }
+        return response;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

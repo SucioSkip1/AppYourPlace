@@ -15,7 +15,7 @@ public class web_ver_chats {
         String aux = "";
         try {
             //Establecer URL a consultar en servidor
-            URL url = new URL("http://192.168.0.9:80/usu/mensajes.php");
+            URL url = new URL("http://192.168.0.14:80/usu/mensajes.php");
             //Establecer conexiÃ³n con el webservice
             HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
             //Habilitar envÃ­o de datos mediante POST

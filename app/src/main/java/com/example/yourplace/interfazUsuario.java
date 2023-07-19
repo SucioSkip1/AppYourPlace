@@ -66,7 +66,8 @@ public void buscador(View view){
     }
 }
     public void notificacion(View view){
-        Toast.makeText(this, "No tienes ninguna notificacion", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(), ver_notificaciones.class);
+        startActivity(i);
     }
       public void irLugaresFavoritos (View view){
         Intent i = new Intent(getApplicationContext(),lugares_favoritos.class);
